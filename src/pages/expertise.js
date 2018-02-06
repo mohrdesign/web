@@ -55,7 +55,7 @@ class ExpertisePage extends React.Component {
               desc="We prototype early and often to quickly validate ideas and create feedback loops from client teams and core users."
               activities={["Information Architecture","UX & Visual Design","Participatory Design Workshops","High- & Low-Fidelity Prototyping", "Concept Validation"]}
             />
-            <Illustration className="svg-four"><AnimatedSVG svg="executing"/></Illustration>
+            <Illustration className="svg-four"><AnimatedSVG svg="executing" duration={2400}/></Illustration>
             <ExpertiseItem
               className="content-four"
               name="Executing"
