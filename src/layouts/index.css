@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500');
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+nav {
+  vertical-align: text-top;
+}
+html {
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Montserrat', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  transition: background-image 1s ease;
+}
+html.homepage {
+  background-color: #19FFCD;
+  background-image: linear-gradient(123deg, #1E59E2 0%, #4A178A 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+html nav li a {
+  box-shadow: 0px 0px 0px 0px #336CF8; /* color: Primary */
+}
+html nav li a:hover {
+  box-shadow: 0px 1.25px 0px 0px #336CF8; /* color: Primary */
+}
+html.homepage nav li a {
+  box-shadow: 0px 0px 0px 0px #19FFCD; /* color: AccentBright */
+}
+html.homepage nav li a:hover {
+  box-shadow: 0px 1.25px 0px 0px #19FFCD; /* color: AccentBright */
+}
+
+html.secondarypage {
+  min-height: 100%;
+  position: relative;
+}
+body.secondarypage {
+  height: 100%;
+}
+
+
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+p { margin-bottom: 24px; }
+h1, h2, h3, h4 { font-weight: inherit; }
+h1 {
+/* font-size: 5.063em; */
+  margin-bottom: 24px;
+  font-size: 81.008px;
+  line-height: 96px;
+}
+h2 {
+/* font-size: 3.375em; */
+  margin-bottom: 24px;
+  font-size: 54px;
+  line-height: 72px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 45px;
+  margin-bottom: 24px;
+  /* font-weight: 500; */
+}
+h4 {
+/* font-size: 1.5em; */
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+small {
+/* font-size: 0.667em; */
+  font-size: 10.6px;
+  line-height: 18px;
+}
+
+::selection {
+  background-color: rgba(25,255,205,0.4);
+}
+
+
+/* expertise page - executing svg animation */
+@-webkit-keyframes hovering-cylinder {
+  0%   {transform: translate(37px, 0px)}
+  100%  {transform: translate(37px, 16px)}
+}
+@-webkit-keyframes hovering-cube {
+  0%   {transform: translate(85px, 0px)}
+  100%  {transform: translate(85px, 12px)}
+}
+.an-cylinder {
+  -webkit-animation: hovering-cylinder 4s infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.77,.01,.23,.99);
+}
+.an-cube {
+  -webkit-animation: hovering-cube 8s infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.77,.01,.23,.99);
+}
+
+#smokeCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+@keyframes bounceIn {
+  from, 0%, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    display: none;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  1% {
+    opacity: 0;
+    display: inline-block;
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    display: inline-block;
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceOut {
+  20% {
+    display: inline-block;
+    transform: scale3d(.9, .9, .9);
+  }
+
+  50%, 55% {
+    opacity: 1;
+    display: inline-block;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  99% {
+    opacity: 0;
+    display: inline-block;
+    transform: scale3d(.3, .3, .3);
+  }
+  to {
+    opacity: 0;
+    display: none;
+    transform: scale3d(.3, .3, .3);
+  }
+}
+
+
+
+.word-enter {
+  animation-name: bounceIn;
+  animation-duration: .8s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.word-leave {
+  animation-name: bounceOut;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+
+
+
+ul.modernizrtest {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3;
+}
+ul.modernizrtest li {
+  color:green
+}
+.no-cssgrid li.cssgrid {
+  color: red;
+}
+.no-cssgridlegacy li.cssgridlegacy {
+  color: red;
+}
+.no-inlinesvg li.inlinesvg {
+  color: red;
+}
+.no-setclasses li.setclasses {
+  color: red;
+}

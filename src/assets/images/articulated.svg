@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="179px" height="231px" viewBox="0 0 179 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>articulated copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="articulated-copy" transform="translate(0.000000, -3.000000)">
+            <path d="M55.2,137 C85.1338334,137 109.4,112.733833 109.4,82.8 C109.4,52.8661666 85.1338334,28.6 55.2,28.6 C25.2661666,28.6 1,52.8661666 1,82.8 C1,97.723825 7.05987645,111.679831 17.5949533,121.832127 C27.6294494,131.50203 40.9807263,137 55.2,137 Z" id="oval" stroke="#336CF8" stroke-width="2"></path>
+            <path d="M61.6,83.8 C57.5130929,83.8 54.2,87.1130929 54.2,91.2 L54.2,174 C54.2,178.086907 57.5130929,181.4 61.6,181.4 L144.4,181.4 C148.486907,181.4 151.8,178.086907 151.8,174 L151.8,91.2 C151.8,87.1130929 148.486907,83.8 144.4,83.8 L61.6,83.8 Z" id="rect" stroke="#336CF8" stroke-width="2"></path>
+            <path d="M93.6,33.6 C117.094212,14.8854229 98.0295563,40.3927443 121.2,26.4" id="Path-2" stroke="#336CF8" stroke-width="1.75" stroke-linecap="round" transform="translate(107.400000, 30.000000) rotate(-19.000000) translate(-107.400000, -30.000000) "></path>
+            <text id="FIG.-1" font-family="Montserrat-SemiBold, Montserrat" font-size="14.4" font-weight="500" letter-spacing="0.383999991" fill="#336CF8">
+                <tspan x="104.4" y="14">FIG. 1</tspan>
+            </text>
+            <path d="M124,205.2 C147.494212,186.485423 128.429556,211.992744 151.6,198" id="Path-2-Copy" stroke="#336CF8" stroke-width="1.75" stroke-linecap="round" transform="translate(137.800000, 201.600000) scale(1, -1) rotate(-49.000000) translate(-137.800000, -201.600000) "></path>
+            <text id="FIG.-2" font-family="Montserrat-SemiBold, Montserrat" font-size="14.4" font-weight="500" letter-spacing="0.383999991" fill="#336CF8">
+                <tspan x="136" y="232.4">FIG. 2</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

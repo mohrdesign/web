@@ -1,0 +1,24 @@
+import React from 'react'
+
+const SVGUnderstanding = () => (
+  <svg width="183" height="176" viewBox="0 0 183 176" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <g fill="none" fillRule="evenodd">
+      <g id="understand" transform="translate(1 1)" stroke="#336CF8" strokeWidth="2">
+        <g>
+          <path id="holder-under" d="M.368 93.5l60.865 54.194a2 2 0 0 0 2.587.062l115.914-93.625"/>
+          <path id="holder-outer" d="M.033 94.439v22.21a2 2 0 0 0 .662 1.486l60.429 54.395a2 2 0 0 0 2.6.066L179.42 78.567a2 2 0 0 0 .738-1.552V55.479a2 2 0 0 0-.68-1.502L119.626 1.385a2 2 0 0 0-2.557-.07L.796 92.868a2 2 0 0 0-.763 1.572z"/>
+        </g>
+        <g transform="translate(37 69)">
+          <path stroke="#7021C6" id="hole-oval-under" d="M3.398 35.958c4.586-7.379 13.548-12.86 25.077-12.86 11.581 0 20.611 5.543 25.204 12.972"/>
+          <path stroke="#7021C6" id="hole-oval" d="M28.5 49c15.77 0 28.501-10.969 28.501-24.5S44.485 0 28.5 0C12.515 0 0 10.969 0 24.5S12.73 49 28.5 49z"/>
+        </g>
+        <g transform="translate(84 25)">
+          <path stroke="#7021C6" id="hole-rect-under" d="M51.127 39.063L33.265 23.56a1 1 0 0 0-1.286-.02L13.625 38.469"/>
+          <path stroke="#7021C6" id="hole-rect" d="M1.61 27.241l29.382 27.746a1 1 0 0 0 1.334.034l31.27-26.619a1 1 0 0 0 .01-1.514L33.619.654a1 1 0 0 0-1.292-.021L1.663 25.74a1 1 0 0 0-.053 1.5z"/>
+        </g>
+      </g>
+    </g>
+  </svg>
+)
+
+export default SVGUnderstanding

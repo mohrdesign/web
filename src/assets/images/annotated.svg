@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="151px" height="193px" viewBox="0 0 151 193" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>articulated</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="46" cy="69" r="46"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="92" height="92" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect id="path-3" x="46" y="69" width="83" height="83"></rect>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="83" height="83" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="articulated" transform="translate(0.000000, -2.000000)">
+            <use id="Oval-6" stroke="#336CF8" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="7,4" xlink:href="#path-1"></use>
+            <use id="Rectangle-2" stroke="#336CF8" mask="url(#mask-4)" stroke-width="4" stroke-dasharray="7,4" xlink:href="#path-3"></use>
+            <path d="M78,28 C97.5785098,12.4045191 81.6912969,33.6606203 101,22" id="Path-2" stroke="#336CF8" stroke-width="1.5" stroke-linecap="round" transform="translate(89.500000, 25.000000) rotate(-19.000000) translate(-89.500000, -25.000000) "></path>
+            <path d="M105,171 C124.57851,155.404519 108.691297,176.66062 128,165" id="Path-2-Copy" stroke="#336CF8" stroke-width="1.5" stroke-linecap="round" transform="translate(116.500000, 168.000000) scale(1, -1) rotate(-49.000000) translate(-116.500000, -168.000000) "></path>
+            <text id="FIG.-1" font-family="Montserrat-SemiBold, Montserrat" font-size="12" font-weight="500" letter-spacing="0.319999993" fill="#336CF8">
+                <tspan x="87" y="12">FIG. 1</tspan>
+            </text>
+            <text id="FIG.-2" font-family="Montserrat-SemiBold, Montserrat" font-size="12" font-weight="500" letter-spacing="0.319999993" fill="#336CF8">
+                <tspan x="115" y="194">FIG. 2</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

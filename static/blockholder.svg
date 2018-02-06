@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="182px" height="176px" viewBox="0 0 182 176" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>blockholder</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blockholder" stroke="#336CF8" stroke-width="2">
+            <path d="M1.55337128,94.2439855 L63.5211558,149.686949 L180.449233,54.9566685 L119.322091,1.30074619 L1.55337128,94.2439855 Z" id="Rectangle-11"></path>
+            <path d="M181,56.2383078 L1,95.0061864 L1,118.602839 L63.5212039,174.685523 L181,79.2630868 L181,56.2383078 Z" id="Rectangle-11"></path>
+            <path d="M85.5231437,52.6534232 L116.67754,81.6627746 L149.467958,53.8800067 L117.991512,26.3078018 L85.5231437,52.6534232 Z" id="Rectangle-11"></path>
+            <path d="M99.1482646,63.2458364 L135.181168,64.0462085 L117.37475,48.6024442 L99.1482646,63.2458364 Z M97.6686803,64.4345534 L97.626316,64.4685894 L97,63.6890201 L97.7071068,64.3961269 L97.6686803,64.4345534 Z" id="Rectangle-11"></path>
+            <ellipse id="Oval-2" cx="66.5" cy="94.5" rx="28.5" ry="24.5"></ellipse>
+            <path d="M91.0050556,105.08111 C85.778057,97.735164 76.4742402,93.0999756 66.2037792,93.0999756 C56.1770687,93.0999756 47.0620749,97.5168405 41.7657334,104.58435 L91.0050556,105.08111 Z" id="Oval-2"></path>
+        </g>
+    </g>
+</svg>
