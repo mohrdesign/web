@@ -36,7 +36,7 @@ const TeamPage = ({ data }) => {
               <Person
                 name="Andre Mohr"
                 location="Brooklyn"
-                position="Head Hancho"
+                position="Head Honcho"
                 desc="Andre has a passion for bringing a human experience to a digital world. He has 10+ years doing Product design for frog, Microsoft, and AOL, among others. A native German now residing in NYC, Andre’s (not so) secret resume includes DJ, snowboarder, photographer, sommelier, and father to a well-mannered and opinionated 4yr old."
                 img={data.andreImage.sizes}
                 capabilities={["Human-Centered Design","Design Workshops","Ideation Facilitation","User Research", "Creative Direction"]}
