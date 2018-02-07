@@ -31,7 +31,7 @@ class ExpertisePage extends React.Component {
           <PageIntro withSubhead>Every project is an opportunity to make things better for our clients and their customers.</PageIntro>
           <Subhead>Here’s a look at how we partner with organizations to create and transform products and services.</Subhead>
           <ExpertiseGrid>
-            <Illustration className="svg-one"><AnimatedSVG debug={true} bOffset="50px" svg="understanding"/></Illustration>
+            <Illustration className="svg-one"><AnimatedSVG bOffset="50px" svg="understanding"/></Illustration>
             <ExpertiseItem
               className="content-one"
               name="Understanding"
