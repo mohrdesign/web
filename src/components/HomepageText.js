@@ -30,11 +30,12 @@ class HomepageText extends React.Component {
   componentWillUnmount() {
     wordCount = 0;
   }
-  createAnimatedWords({input, cta = false}) {
+  createAnimatedWords({input}) {
     const str = input.split(/ | /);
     const wrapEachWord = str.map((word, index) => {
       let res;
-      if( word === `\u2014` || word === 'bad' || word === 'Experiences') {
+      const shouldHaveHairlineSpace = word === `\u2014` || word === 'bad' || word === 'Experiences';
+      if (shouldHaveHairlineSpace) {
         res = (<AnimatedWord show={true} id={'word-' + wordCount} delay={wordCount*10}>{word + ` `}</AnimatedWord>)
       } else {
         res = (<AnimatedWord show={true} id={'word-' + wordCount} delay={wordCount*10}>{word}&nbsp;</AnimatedWord>)
@@ -47,12 +48,9 @@ class HomepageText extends React.Component {
   buildIntroText() {
     const textIntro = this.createAnimatedWords({
       input: "We’re human-centered designers with real human centers. Experiences \u2014 good and bad \u2014 become memories. We can partner with you to make your product or service the good kind of memorable.",
-      cta: false,
-      show: true
     })
     const textCTA = this.createAnimatedWords({
       input: "Explore\u00A0how.",
-      cta: true
     })
     const ctaFragment = createFragment({
       ctaWords: textCTA
