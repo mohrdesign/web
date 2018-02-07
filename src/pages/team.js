@@ -10,14 +10,6 @@ import PageIntro from '../components/PageIntro'
 import ContactSection from '../components/ContactSection'
 import Person from '../components/Person'
 import Partner from '../components/Partner'
-import PhotoAndre from '../assets/images/team/andre_front.jpg'
-import PhotoAlan from '../assets/images/team/alan_front.jpg'
-import PhotoLiz from '../assets/images/team/elizabeth_front_duotone.jpg'
-import PhotoAlisha from '../assets/images/team/alisha_front.jpg'
-import PhotoHaley from '../assets/images/team/haley_front.jpg'
-import PhotoThomas from '../assets/images/team/thomas_front.png'
-import PhotoEvan from '../assets/images/team/evan_front.png'
-import PersonEWImage from '../assets/images/ew.png'
 import GridImage from '../../static/grid.svg'
 import CircleImage from '../../static/primitive-circle.svg'
 import TriangleImage from '../../static/primitive-triangle.svg'
@@ -203,7 +195,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_tracedSVG
       }
     }
-    evanImage: imageSharp(id: { regex: "/evan_front/" }) {
+    evanImage: imageSharp(id: { regex: "/hirsch_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
