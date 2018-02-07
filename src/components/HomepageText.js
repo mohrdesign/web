@@ -54,9 +54,12 @@ class HomepageText extends React.Component {
       input: "Explore\u00A0how.",
       cta: true
     })
+    const ctaFragment = createFragment({
+      ctaWords: textCTA
+    })
     const fullText = createFragment({
       intro: textIntro,
-      cta: (<HPLink to="/expertise">{textCTA}</HPLink>)
+      cta: (<HPLink to="/expertise">{ctaFragment}</HPLink>)
     });
     return <Intro>{fullText}</Intro>
   }
