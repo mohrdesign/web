@@ -71,13 +71,13 @@ const TeamPage = ({ data }) => {
               <Partner
                 name="Evan Hirsch"
                 position=""
-                desc="Evan is Managing Partner of Engine Co. 4, LLC a consortium of business, creative and technical executives providing strategic direction to clients in games, healthcare and applied research. He is also a partner at The PlayNice Institute, a company that designs fun, evidence based games to help children overcome anxiety and depression disorders."
+                desc={<div dangerouslySetInnerHTML={{ __html: "Evan is Managing Partner of Engine Co. 4, LLC a consortium of business, creative and technical executives providing strategic direction to clients in games, healthcare and applied research. He is also a partner at <a target='_blank' href='http://theplayniceinstitute.com/'>The PlayNice Institute</a>, a company that designs fun, evidence based games to help children overcome anxiety and depression disorders." }} />}
                 img={data.evanImage.sizes}
               />
               <Partner
                 name="Thomas Logan"
                 position=""
-                desc="Thomas has spent the past 15 years assisting organizations to create technology solutions that work for people with disabilities. Over his career Logan has worked on project deliverables for federal, state, and local government agencies as well as private organizations from startups to Fortune 500s."
+                desc={<div dangerouslySetInnerHTML={{ __html: "<div>As owner of <a target='_blank' href='https://equalentry.com'>Equal Entry</a>, Thomas has spent the past 15 years assisting organizations to create technology solutions that work for people with disabilities. Over his career Logan has worked on project deliverables for federal, state, and local government agencies as well as private organizations from startups to Fortune 500s.</div>" }} />}
                 img={data.thomasImage.sizes}
               />
             </PartnerGrid>

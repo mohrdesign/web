@@ -19,7 +19,6 @@ class Partner extends React.Component {
     )
   }
 }
-
 const PersonContainer = styled.div`
   margin-bottom: 3em;
   margin-top: 3em;
@@ -52,9 +51,6 @@ const BgImage = styled(Img)`
     font-family: 'object-fit: cover !important; object-position: 0% 0% !important;'
   }
 `
-
-
-
 const Bio = styled.div`
   margin-top: 1em;
 `
@@ -69,6 +65,13 @@ const Position = styled.div`
 `
 const Desc = styled.div`
   margin-top: 0;
+  & a, & a:visited {
+    color: ${Color.Primary};
+    text-decoration: none;
+  }
+  & a:hover {
+    text-decoration: underline;
+  }
 `
 const Capabilities = styled.ul`
   padding-top: 1em;
