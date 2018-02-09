@@ -8,6 +8,16 @@ import ContentContainer from '../layouts/ContentContainer'
 // import Scene from '../components/Scene'
 import { breakpoint } from '../layouts/breakpoints'
 import HomepageText from '../components/HomepageText'
+import MagneticButton from '../components/MagneticButton'
+
+const buttonSettings = {
+	threshold: 20,
+	ratio: 5,
+	max: 40,
+	scale: 1.2,
+	ease: 0.225,
+	label: 'Explore How'
+}
 
 const HomePage = ({ transition }) => (
   <div>
@@ -17,6 +27,7 @@ const HomePage = ({ transition }) => (
     </Helmet>
     <ContentContainer>
       <HomepageText/>
+      <MagneticButton {...buttonSettings}/>
     </ContentContainer>
     <Footer onDark />
     {/* <Scene/> */}

@@ -4,9 +4,9 @@ import { breakpoint } from '../layouts/breakpoints'
 import * as Color from '../utils/colors'
 import FadeTransition from './FadeTransition'
 import AnimatedWord from './AnimatedWord'
-import createFragment from 'react-addons-create-fragment'; // ES6
+import createFragment from 'react-addons-create-fragment' // ES6
 import Link from 'gatsby-link'
-
+import HeartCursor from '../assets/images/heart.svg'
 
 const transform = (node, index) => {
   if (node.type === 'tag' && node.name === 'span') {
@@ -46,18 +46,25 @@ class HomepageText extends React.Component {
     return wrapEachWord
   }
   buildIntroText() {
+    const firstSentence = this.createAnimatedWords({
+      input: "We’re human-centered designers with real human centers."
+    })
     const textIntro = this.createAnimatedWords({
-      input: "We’re human-centered designers with real human centers. Experiences \u2014 good and bad \u2014 become memories. We can partner with you to make your product or service the good kind of memorable.",
+      input: "Experiences \u2014 good and bad \u2014 become memories. We can partner with you to make your product or service the good kind of memorable.",
     })
     const textCTA = this.createAnimatedWords({
       input: "Explore\u00A0how.",
+    })
+    const firstSentenceFragment = createFragment({
+      firstSent: firstSentence
     })
     const ctaFragment = createFragment({
       ctaWords: textCTA
     })
     const fullText = createFragment({
+      fs: (<HeartHover>{firstSentenceFragment}</HeartHover>),
       intro: textIntro,
-      cta: (<HPLink to="/expertise">{ctaFragment}</HPLink>)
+      // cta: (<HPLink to="/expertise">{ctaFragment}</HPLink>)
     });
     return <Intro>{fullText}</Intro>
   }
@@ -106,6 +113,14 @@ const HPLink = styled(Link)`
   &:hover {
     color: ${Color.White};
     background-color: ${Color.Primary};
+  }
+`
+const HeartHover = styled.span`
+  display: inline;
+  cursor: url(${HeartCursor}) 25 15, auto;
+  transition: color 0.2s ease;
+  &:hover {
+    color: #B1F9EB;
   }
 `
 

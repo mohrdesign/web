@@ -17,6 +17,7 @@ export const NeutralDark = '#4E535F'
 
 // gradients
 export const GradientDark = 'linear-gradient(151deg, #336CF8 0%, #6F2CC3 100%)'
+export const GradientLight = 'linear-gradient(151deg, #A0FFEA 0%, #19FFCD 100%)'
 
 // misc
 export const White = '#FFFFFF'
