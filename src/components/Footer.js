@@ -83,6 +83,7 @@ const MohrFooter = styled.div`
 `
 const City = styled.button`
   background: none;
+  outline: none;
   border: 0;
   color: inherit;
   cursor: pointer;
@@ -94,6 +95,9 @@ const City = styled.button`
      -moz-user-select: none;
       -ms-user-select: none;
   &:hover {
+    color: ${props => props.onDark ? Color.AccentBright : Color.Primary};
+  }
+  &:active {
     color: ${props => props.onDark ? Color.White : Color.Primary};
   }
 `
