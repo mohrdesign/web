@@ -1,71 +1,30 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { breakpoint } from '../layouts/breakpoints'
 import * as Color from '../utils/colors'
-import FadeTransition from './FadeTransition'
-import AnimatedWord from './AnimatedWord'
-import createFragment from 'react-addons-create-fragment'; // ES6
 import Link from 'gatsby-link'
-
-
-const transform = (node, index) => {
-  if (node.type === 'tag' && node.name === 'span') {
-    return React.createElement(
-      AnimatedWord,
-      generatePropsFromAttributes(node.attribs, index),
-      processNodes(node.children, transform)
-    )
-  } else if (node.type === 'tag' && node.name === 'accent') {
-    return React.createElement(
-      Accent,
-      generatePropsFromAttributes(node.attribs, index),
-      processNodes(node.children, transform)
-    )
-  }
-}
-
-let wordCount = 0
+import { TimelineLite } from 'gsap'
+import SplitText from '../utils/SplitText'
 
 class HomepageText extends React.Component {
-  componentWillUnmount() {
-    wordCount = 0;
-  }
-  createAnimatedWords({input}) {
-    const str = input.split(/ | /);
-    const wrapEachWord = str.map((word, index) => {
-      let res;
-      const shouldHaveHairlineSpace = word === `\u2014` || word === 'bad' || word === 'Experiences';
-      if (shouldHaveHairlineSpace) {
-        res = (<AnimatedWord show={true} id={'word-' + wordCount} delay={wordCount*10}>{word + ` `}</AnimatedWord>)
-      } else {
-        res = (<AnimatedWord show={true} id={'word-' + wordCount} delay={wordCount*10}>{word}&nbsp;</AnimatedWord>)
-      }
-      wordCount = wordCount + 1;
-      return res
-    })
-    return wrapEachWord
-  }
-  buildIntroText() {
-    const textIntro = this.createAnimatedWords({
-      input: "We’re human-centered designers with real human centers. Experiences \u2014 good and bad \u2014 become memories. We can partner with you to make your product or service the good kind of memorable.",
-    })
-    const textCTA = this.createAnimatedWords({
-      input: "Explore\u00A0how.",
-    })
-    const ctaFragment = createFragment({
-      ctaWords: textCTA
-    })
-    const fullText = createFragment({
-      intro: textIntro,
-      cta: (<HPLink to="/expertise">{ctaFragment}</HPLink>)
-    });
-    return <Intro>{fullText}</Intro>
+  componentDidMount() {
+    const intro = ReactDOM.findDOMNode(this.refs.mount);
+    const tl = new TimelineLite;
+    const text = new SplitText(intro, {type:"words"});
+    const words = text.words;
+    tl.staggerFrom(words, 0.8, {
+      opacity:0,
+      y:10,
+      rotationX:60,
+      ease:Expo.easeOut
+    }, 0.04, "+=0.4");
   }
   render() {
     return (
-      <div>
-        {this.buildIntroText()}
-      </div>
+      <Intro ref="mount">
+        We're human-centered designers with real human centers. Experiences — good and bad — become memories. We can partner with you to make your product or service the good kind of memorable. <HPLink to="/expertise">Explore how.</HPLink>
+      </Intro>
     )
   }
 }
@@ -90,13 +49,9 @@ const Intro = styled.h3`
     line-height: 45px;
   `}
 `
-const Accent = styled.span`
-  color: ${Color.AccentBright};
-  cursor: pointer;
-`
 const HPLink = styled(Link)`
   color: ${Color.AccentBright};
-  padding-left: 5px;
+  padding: 0px 5px;
   margin-left: -5px;
   text-decoration: none;
   transition: color 0.4s ease,

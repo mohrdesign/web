@@ -6,11 +6,13 @@ import styled from 'styled-components'
 import Pin from './Pin'
 import ContentContainer from '../layouts/ContentContainer'
 import { breakpoint } from '../layouts/breakpoints'
+import Popcity from './Popcity'
 
 
 export const Footer = (props) => {
   return (
     <FooterContainer {...props}>
+      <Popcity/>
       <ContentContainer>
         <MohrFooter {...props}>
           { !props.onDark && (
@@ -23,11 +25,8 @@ export const Footer = (props) => {
           )}
           <FooterLeft>
             <ul>
-              {/* <li><Pin {...props}/></li> */}
-              {/* <li><p><Pin {...props}/> Brooklyn / Denver / Portland</p></li> */}
               <li><p>Brooklyn / Denver / Portland</p></li>
               { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
-              {/* <li><p><span class="copyright">&copy;</span>Copyright Mohr Design, Inc. 2018</p></li> */}
             </ul>
           </FooterLeft>
           <FooterRight>

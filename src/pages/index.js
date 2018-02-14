@@ -5,7 +5,6 @@ import * as Color from '../utils/colors'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContentContainer from '../layouts/ContentContainer'
-// import Scene from '../components/Scene'
 import { breakpoint } from '../layouts/breakpoints'
 import HomepageText from '../components/HomepageText'
 
@@ -19,7 +18,6 @@ const HomePage = ({ transition }) => (
       <HomepageText/>
     </ContentContainer>
     <Footer onDark />
-    {/* <Scene/> */}
   </div>
 )
 
