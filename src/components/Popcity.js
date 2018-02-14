@@ -19,7 +19,7 @@ function appearAnim(utils) {
       rotation: rand(-20, 20),
       force3D: !0
     }, {
-      top: "40%",
+      top: "60%",
       rotation: rand(-10, 10),
       force3D: !0,
       ease: Expo.easeOut,
@@ -46,7 +46,6 @@ const Circle = GSAP()(React.createClass({
     this.remove()
   },
   componentDidLeave: function() {
-    console.log("gone")
   },
   componentWillLeave: function(callback) {
     this.addAnimation(leaveAnim, {callback: callback})
@@ -100,12 +99,10 @@ class Popcity extends React.Component {
   state = {
     circles: []
   }
-  handleClick = (e) => {
+  handleClick = (city) => {
+    console.log(city)
     var newCircle = {
       id: nextId++,
-      color: sample(COLORS),
-      x: e.clientX,
-      y: e.clientY-120
     }
     this.setState({circles: this.state.circles.concat(newCircle)})
   }
@@ -115,29 +112,49 @@ class Popcity extends React.Component {
     this.setState({circles: without(circles, circle)})
   }
   render() {
-    var containerStyle = {
-      position: 'absolute',
-      width: '100%',
-      height: '100%',
-    }
     var handleRemoveRequest = this.handleRemoveRequest
 
     return (
-      <div onClick={this.handleClick} style={containerStyle} ref={(mount) => { this.rootNode = mount }}>
-        <TransitionGroup>
-          {this.state.circles.map(function(circle) {
-            return (
-                <Circle
-                  key={circle.id}
-                  {...circle}
-                  onClick={handleRemoveRequest}
-                />
-            )
-          })}
-        </TransitionGroup>
-      </div>
+      <PopDiv>
+        <Container ref={(mount) => { this.rootNode = mount }}>
+          <TransitionGroup>
+            {this.state.circles.map(function(circle) {
+              return (
+                  <Circle
+                    key={circle.id}
+                    {...circle}
+                    onClick={handleRemoveRequest}
+                  />
+              )
+            })}
+          </TransitionGroup>
+        </Container>
+      </PopDiv>
     )
   }
 }
+
+
+const PopDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  &:after {
+    clear: both;
+  }
+  &:after, &:before {
+    content: ''
+    display: table;
+  }
+`
+const Container = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`
 
 export default Popcity

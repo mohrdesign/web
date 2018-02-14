@@ -9,35 +9,50 @@ import { breakpoint } from '../layouts/breakpoints'
 import Popcity from './Popcity'
 
 
-export const Footer = (props) => {
-  return (
-    <FooterContainer {...props}>
-      <Popcity/>
-      <ContentContainer>
-        <MohrFooter {...props}>
-          { !props.onDark && (
-            <FooterTop>
-              <ul>
-                <li><FooterLink to='/expertise'>Expertise</FooterLink></li>
-                <li><FooterLink to='/team'>Team</FooterLink></li>
-              </ul>
-            </FooterTop>
-          )}
-          <FooterLeft>
-            <ul>
-              <li><p>Brooklyn / Denver / Portland</p></li>
-              { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
-            </ul>
-          </FooterLeft>
-          <FooterRight>
-          </FooterRight>
-        </MohrFooter>
-      </ContentContainer>
-    </FooterContainer>
-  )
+class Footer extends React.Component {
+  pop = (city) => {
+
+  }
+  render() {
+    const { props } = this
+    return (
+      <div>
+        <FooterContainer {...props}>
+          <ContentContainer>
+            <MohrFooter {...props}>
+              { !props.onDark && (
+                <FooterTop>
+                  <ul>
+                    <li><FooterLink to='/expertise'>Expertise</FooterLink></li>
+                    <li><FooterLink to='/team'>Team</FooterLink></li>
+                  </ul>
+                </FooterTop>
+              )}
+              <FooterLeft>
+                <ul>
+                  <li>
+                    <p>
+                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("brooklyn")}>Brooklyn</City> /&nbsp;
+                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("denver")}>Denver</City> /&nbsp;
+                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("portland")}>Portland</City>
+                    </p>
+                  </li>
+                  { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
+                </ul>
+              </FooterLeft>
+              <FooterRight>
+              </FooterRight>
+            </MohrFooter>
+          </ContentContainer>
+        </FooterContainer>
+        <Popcity ref="popcontroller"/>
+      </div>
+    )
+  }
 }
 
 const MohrFooter = styled.div`
+  z-index: 20;
   padding-bottom: ${props => props.onDark && '2em'};
   @media screen and (min-height: 600px) {
     position: ${props => props.onDark ? 'absolute' : ''};
@@ -66,7 +81,25 @@ const MohrFooter = styled.div`
     margin-bottom: 0;
   }
 `
+const City = styled.button`
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+  &:hover {
+    color: ${props => props.onDark ? Color.White : Color.Primary};
+  }
+`
 const FooterLeft = styled.div`
+  position: relative;
+  z-index: 20;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -78,6 +111,8 @@ const FooterRight = styled.div`
 
 `
 const FooterTop = styled.div`
+  position: relative;
+  z-index: 20;
   flex-basis: 100%;
   font-size: 1.2em;
   & li {

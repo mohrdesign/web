@@ -51,6 +51,8 @@ const Intro = styled.h3`
 `
 const HPLink = styled(Link)`
   color: ${Color.AccentBright};
+  position: relative;
+  z-index: 20;
   padding: 0px 5px;
   margin-left: -5px;
   text-decoration: none;
