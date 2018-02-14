@@ -5,7 +5,9 @@ import { breakpoint } from '../layouts/breakpoints'
 import * as Color from '../utils/colors'
 import Link from 'gatsby-link'
 import { TimelineLite } from 'gsap'
-import SplitText from '../utils/SplitText'
+if (typeof document !== `undefined`) {
+  const SplitText = require("../utils/SplitText");
+}
 
 class HomepageText extends React.Component {
   componentDidMount() {
