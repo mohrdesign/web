@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "Alan Dickinson <alan@dickinson.is>",
   "dependencies": {
-    "gatsby": "^1.9.173",
+    "gatsby": "^1.9.198",
     "gatsby-image": "^1.0.34",
     "gatsby-link": "^1.6.35",
     "gatsby-plugin-google-analytics": "^1.0.17",
