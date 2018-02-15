@@ -38,19 +38,31 @@ function appearAnim(utils) {
 
 const PopAsset = {
   brooklyn: {
-    image: BkImg,
-    height: '540px',
-    width: '300px'
+    style: {
+      height: '540px',
+      width: '300px',
+      background: `url(${BkImg}) center center no-repeat`,
+      backgroundSize: '125%',
+      borderRadius: '40px'
+    }
   },
   denver: {
-    image: DnvImg,
-    height: '540px',
-    width: '300px'
+    style: {
+      height: '540px',
+      width: '300px',
+      background: `url(${DnvImg}) center center no-repeat`,
+      backgroundSize: '125%',
+      borderRadius: '40px'
+    }
   },
   portland: {
-    image: PdxImg,
-    height: '540px',
-    width: '300px'
+    style: {
+      height: '540px',
+      width: '300px',
+      background: `url(${PdxImg}) center center no-repeat`,
+      backgroundSize: '125%',
+      borderRadius: '40px'
+    }
   }
 }
 
@@ -64,16 +76,11 @@ const Popup = GSAP()(React.createClass({
   remove: function() {
     this.props.onClick(this.props.id)
   },
+  shouldComponentUpdate(nextProps, nextState) {
+    return false;
+  },
   render: function() {
-    var r = 40
-    var style = {
-      background: `url(${PopAsset[this.props.city].image}) center center no-repeat`,
-      backgroundSize: '125%',
-      width: `${PopAsset[this.props.city].width}`,
-      height: `${PopAsset[this.props.city].height}`,
-      borderRadius: r,
-    }
-    return <PopItem style={style}/>
+    return <PopItem style={PopAsset[this.props.city].style}/>
   }
 }))
 
