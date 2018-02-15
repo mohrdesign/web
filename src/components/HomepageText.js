@@ -21,6 +21,9 @@ class HomepageText extends React.Component {
       rotationX:60,
       ease:Expo.easeOut
     }, 0.04, "+=0.4");
+    tl.pause();
+    intro.style.visibility = 'visible';
+    tl.resume();
   }
   render() {
     return (
@@ -32,6 +35,7 @@ class HomepageText extends React.Component {
 }
 
 const Intro = styled.h3`
+  visibility: hidden;
   color: ${Color.White};
   margin-top: 3em;
   -webkit-font-smoothing: antialiased;
