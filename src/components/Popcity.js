@@ -1,58 +1,65 @@
 import React from 'react'
 import * as Color from '../utils/colors'
 import styled from 'styled-components'
-import { TweenLite, TimelineMax } from 'gsap'
+import { TweenLite, TimelineLite, TimelineMax } from 'gsap'
 import GSAP from 'react-gsap-enhancer'
 import TransitionGroup from 'react-transition-group/TransitionGroup'
 import { sample, find, without } from 'lodash'
 import BkImg from '../assets/images/brooklyn.jpg'
+import DnvImg from '../assets/images/denver.jpg'
+import PdxImg from '../assets/images/portland.jpg'
 
 function rand(a, b) {
     return Math.floor(Math.random() * (b - a + 1) + a)
 }
 
 function appearAnim(utils) {
-  return new TweenLite
-    .fromTo(utils.target, 1.2, {
-      autoAlpha: 1,
-      left: `${rand(25,75)}%`,
-      rotation: rand(-20, 20),
-      force3D: !0
-    }, {
-      top: "60%",
-      rotation: rand(-10, 10),
-      force3D: !0,
-      ease: Expo.easeOut,
-      onComplete: utils.options.callback
-    })
+  var tl = new TimelineLite();
+  tl.add( TweenLite.fromTo(utils.target, 1.2, {
+    autoAlpha: 1,
+    left: `${rand(25,75)}%`,
+    rotation: rand(-20, 20),
+    force3D: !0
+  }, {
+    top: "60%",
+    rotation: rand(-10, 10),
+    force3D: !0,
+    ease: Expo.easeOut
+  }) );
+  tl.add( TweenLite.to(utils.target, 1.5, {
+    top: "150%",
+    rotation: rand(-20, 20),
+    force3D: !0,
+    ease: Expo.easeIn,
+    onComplete: utils.options.callback
+  }) );
+  return tl
 }
 
-function leaveAnim(utils) {
-  return new TweenLite
-    .to(utils.target, 1.5, {
-      top: "130%",
-      rotation: rand(-20, 20),
-      force3D: !0,
-      ease: Expo.easeIn,
-      onComplete: utils.options.callback
-    })
+const PopAsset = {
+  brooklyn: {
+    image: BkImg,
+    height: '540px',
+    width: '300px'
+  },
+  denver: {
+    image: DnvImg,
+    height: '540px',
+    width: '300px'
+  },
+  portland: {
+    image: PdxImg,
+    height: '540px',
+    width: '300px'
+  }
 }
 
-const Circle = GSAP()(React.createClass({
+const Popup = GSAP()(React.createClass({
   componentWillEnter: function(callback) {
     this.addAnimation(appearAnim, {callback: callback})
   },
   componentDidEnter: function() {
     this.remove()
-  },
-  componentDidLeave: function() {
-  },
-  componentWillLeave: function(callback) {
-    this.addAnimation(leaveAnim, {callback: callback})
-  },
-  handleClick: function(e) {
-    // e.stopPropagation()
-    // this.props.onClick(this.props.id)
   },
   remove: function() {
     this.props.onClick(this.props.id)
@@ -60,15 +67,13 @@ const Circle = GSAP()(React.createClass({
   render: function() {
     var r = 40
     var style = {
-      // backgroundColor: this.props.color,
-      background: `url(${BkImg}) center center no-repeat`,
+      background: `url(${PopAsset[this.props.city].image}) center center no-repeat`,
       backgroundSize: '125%',
-      width: '325px',
-      height: '600px',
+      width: `${PopAsset[this.props.city].width}`,
+      height: `${PopAsset[this.props.city].height}`,
       borderRadius: r,
     }
-
-    return <PopItem style={style} onClick={this.handleClick}/>
+    return <PopItem style={style}/>
   }
 }))
 
@@ -85,31 +90,29 @@ const PopItem = styled.div`
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   visibility: hidden;
-  top: 130%;
+  top: 150%;
   left: -100%;
   max-height: 700px;
 `
 
-
-const COLORS = ['#0074D9', '#FF851B', '#FF4136', '#85144b', '#2ECC40'];
 let nextId = 0;
 
 
 class Popcity extends React.Component {
   state = {
-    circles: []
+    popups: []
   }
   handleClick = (city) => {
-    console.log(city)
-    var newCircle = {
+    var newPopup = {
       id: nextId++,
+      city: city
     }
-    this.setState({circles: this.state.circles.concat(newCircle)})
+    this.setState({popups: this.state.popups.concat(newPopup)})
   }
   handleRemoveRequest = (id) => {
-    const circles = this.state.circles
-    const circle = find(circles, {id: id})
-    this.setState({circles: without(circles, circle)})
+    const popups = this.state.popups
+    const popup = find(popups, {id: id})
+    this.setState({popups: without(popups, popup)})
   }
   render() {
     var handleRemoveRequest = this.handleRemoveRequest
@@ -118,11 +121,11 @@ class Popcity extends React.Component {
       <PopDiv>
         <Container ref={(mount) => { this.rootNode = mount }}>
           <TransitionGroup>
-            {this.state.circles.map(function(circle) {
+            {this.state.popups.map(function(popup) {
               return (
-                  <Circle
-                    key={circle.id}
-                    {...circle}
+                  <Popup
+                    key={popup.id}
+                    {...popup}
                     onClick={handleRemoveRequest}
                   />
               )
