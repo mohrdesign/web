@@ -28,7 +28,7 @@ class HomepageText extends React.Component {
   render() {
     return (
       <Intro ref="mount">
-        We're human-centered designers with real human centers. Experiences — good and bad — become memories. We can partner with you to make your product or service the good kind of memorable. <HPLink to="/expertise">Explore how.</HPLink>
+        We're human-centered designers with real human centers. Experiences — good and bad — become memories. We can partner with you to make your product or service the good kind of memorable. <HPLink to="/expertise">Explore&nbsp;how.</HPLink>
       </Intro>
     )
   }
