@@ -8,6 +8,8 @@ import { sample, find, without } from 'lodash'
 import BkImg from '../assets/images/brooklyn.jpg'
 import DnvImg from '../assets/images/denver.jpg'
 import PdxImg from '../assets/images/portland.jpg'
+import PortlandSVG from './PortlandSVG'
+import BrooklynSVG from './BrooklynSVG'
 
 function rand(a, b) {
     return Math.floor(Math.random() * (b - a + 1) + a)
@@ -38,15 +40,16 @@ function appearAnim(utils) {
 
 const PopAsset = {
   brooklyn: {
+    svg: <BrooklynSVG/>,
     style: {
-      height: '540px',
-      width: '300px',
-      background: `url(${BkImg}) center center no-repeat`,
+      height: '141px',
+      width: '409px',
       backgroundSize: '125%',
       borderRadius: '40px'
     }
   },
   denver: {
+    svg: "",
     style: {
       height: '540px',
       width: '300px',
@@ -56,11 +59,10 @@ const PopAsset = {
     }
   },
   portland: {
+    svg: <PortlandSVG/>,
     style: {
-      height: '540px',
-      width: '300px',
-      background: `url(${PdxImg}) center center no-repeat`,
-      backgroundSize: '125%',
+      height: '413px',
+      width: '412px',
       borderRadius: '40px'
     }
   }
@@ -80,7 +82,7 @@ const Popup = GSAP()(React.createClass({
     return false;
   },
   render: function() {
-    return <PopItem style={PopAsset[this.props.city].style}/>
+    return <PopItem style={PopAsset[this.props.city].style}>{PopAsset[this.props.city].svg}</PopItem>
   }
 }))
 
