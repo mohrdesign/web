@@ -71,6 +71,7 @@ const Popup = GSAP()(React.createClass({
     this.addAnimation(appearAnim, {callback: callback})
   },
   componentDidEnter: function() {
+    console.log("entered");
     this.remove()
   },
   remove: function() {

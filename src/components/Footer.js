@@ -7,7 +7,9 @@ import Pin from './Pin'
 import ContentContainer from '../layouts/ContentContainer'
 import { breakpoint } from '../layouts/breakpoints'
 import Popcity from './Popcity'
-
+import pdxpng from '../assets/images/portland.png'
+import bkpng from '../assets/images/brooklyn.png'
+import dnvpng from '../assets/images/denver.png'
 
 class Footer extends React.Component {
   pop = (city) => {
@@ -32,9 +34,9 @@ class Footer extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("brooklyn")}>Brooklyn</City> /&nbsp;
-                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("denver")}>Denver</City> /&nbsp;
-                      <City {...props} onClick={() => this.refs.popcontroller.handleClick("portland")}>Portland</City>
+                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("brooklyn")}>Brooklyn</City> /&nbsp;
+                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("denver")}>Denver</City> /&nbsp;
+                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("portland")}>Portland</City>
                     </p>
                   </li>
                   { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
@@ -45,11 +47,19 @@ class Footer extends React.Component {
             </MohrFooter>
           </ContentContainer>
         </FooterContainer>
-        <Popcity ref="popcontroller"/>
+        <PopContainer>
+          <Popcity ref="popcontroller"/>
+        </PopContainer>
       </div>
     )
   }
 }
+
+const PopContainer = styled.div`
+  ${breakpoint.for_phone_only`
+    display: none;
+  `}
+`
 
 const MohrFooter = styled.div`
   z-index: 20;
@@ -82,11 +92,14 @@ const MohrFooter = styled.div`
   }
 `
 const City = styled.button`
+  ${breakpoint.for_phone_only`
+    pointer-events: none;
+  `}
   background: none;
   outline: none;
   border: 0;
   color: inherit;
-  cursor: pointer;
+  cursor: ${props => props.onDark ? 'pointer' : 'auto'};
   font: inherit;
   overflow: visible;
   padding: 0;
@@ -95,10 +108,10 @@ const City = styled.button`
      -moz-user-select: none;
       -ms-user-select: none;
   &:hover {
-    color: ${props => props.onDark ? Color.AccentBright : Color.Primary};
+    color: ${props => props.onDark ? Color.AccentBright : 'inherit'};
   }
   &:active {
-    color: ${props => props.onDark ? Color.White : Color.Primary};
+    color: ${props => props.onDark ? Color.White : 'inherit'};
   }
 `
 const FooterLeft = styled.div`
