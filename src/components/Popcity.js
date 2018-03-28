@@ -5,11 +5,9 @@ import { TweenLite, TimelineLite, TimelineMax } from 'gsap'
 import GSAP from 'react-gsap-enhancer'
 import TransitionGroup from 'react-transition-group/TransitionGroup'
 import { sample, find, without } from 'lodash'
-import BkImg from '../assets/images/brooklyn.jpg'
-import DnvImg from '../assets/images/denver.jpg'
-import PdxImg from '../assets/images/portland.jpg'
-import PortlandSVG from './PortlandSVG'
-import BrooklynSVG from './BrooklynSVG'
+import pdxpng from '../assets/images/portland.png'
+import bkpng from '../assets/images/brooklyn.png'
+import dnvpng from '../assets/images/denver.png'
 
 function rand(a, b) {
     return Math.floor(Math.random() * (b - a + 1) + a)
@@ -40,30 +38,30 @@ function appearAnim(utils) {
 
 const PopAsset = {
   brooklyn: {
-    svg: <BrooklynSVG/>,
     style: {
       height: '141px',
       width: '409px',
-      backgroundSize: '125%',
-      borderRadius: '40px'
+      background: `url(${bkpng}) center center no-repeat`,
+      mixBlendMode: 'overlay',
+      backgroundSize: '100%',
     }
   },
   denver: {
-    svg: "",
     style: {
-      height: '540px',
-      width: '300px',
-      background: `url(${DnvImg}) center center no-repeat`,
-      backgroundSize: '125%',
-      borderRadius: '40px'
+      height: '350px',
+      width: '336px',
+      background: `url(${dnvpng}) center center no-repeat`,
+      mixBlendMode: 'overlay',
+      backgroundSize: '100%',
     }
   },
   portland: {
-    svg: <PortlandSVG/>,
     style: {
       height: '413px',
       width: '412px',
-      borderRadius: '40px'
+      background: `url(${pdxpng}) center center no-repeat`,
+      mixBlendMode: 'overlay',
+      backgroundSize: '100%',
     }
   }
 }
@@ -82,7 +80,7 @@ const Popup = GSAP()(React.createClass({
     return false;
   },
   render: function() {
-    return <PopItem style={PopAsset[this.props.city].style}>{PopAsset[this.props.city].svg}</PopItem>
+    return (<PopItem style={PopAsset[this.props.city].style}></PopItem>)
   }
 }))
 
