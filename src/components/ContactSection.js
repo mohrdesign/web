@@ -115,6 +115,8 @@ const ContactLabel = styled.h3`
   `}
 `
 const ContactInfo = styled.div`
+  position: relative;
+  z-index: 20;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0em 0em 2em 0em;
   -webkit-font-smoothing: antialiased;

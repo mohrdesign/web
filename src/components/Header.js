@@ -27,6 +27,8 @@ export const Header = (props) => {
 }
 
 const MohrHeader = styled.nav`
+  position: relative;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   ${breakpoint.for_phone_only`
