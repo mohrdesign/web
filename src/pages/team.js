@@ -50,6 +50,14 @@ const TeamPage = ({ data }) => {
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
               <Person
+                name="Maggie Gram"
+                location="Washington, DC"
+                position="Special Detective"
+                desc="Curiosity may have killed the cat, but Maggie thrives on it. A Ph.D. cultural historian by training, she's a research-driven product designer with an ethnographer’s eye and a strong itch for practical experimentation. On off-hours, Maggie is chasing her curiosity to a new city or exploring one of DC's research libraries."
+                img={data.maggieImage.sizes}
+                capabilities={["User-Centered Design","User Research","Experience Strategy","Design Workshops"]}
+              />
+              <Person
                 name="Alan Dickinson"
                 location="Brooklyn"
                 position="Pixel Pusher"
@@ -168,6 +176,20 @@ export const query = graphql`
       }
     }
     haleyImage: imageSharp(id: { regex: "/haley_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    maggieImage: imageSharp(id: { regex: "/maggie_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
