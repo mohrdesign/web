@@ -66,6 +66,14 @@ const TeamPage = ({ data }) => {
                 capabilities={["Interaction Design","Visual Design","Prototyping","Frontend Engineering"]}
               />
               <Person
+                name="Joe Pirret"
+                location="New York City"
+                position="Puzzler at Large"
+                desc="This creative problem-solver has been on the loose for 10+ years, injecting stealth product design into every project. At ITP, NYU an innocent design student quickly progressed to the Puzzler he is today. Recently he has been honing his skills to craft the best pancake variations for his wife and their 2-year old daughter. "
+                img={data.joeImage.sizes}
+                capabilities={["Interaction Design","User Research","Information Architecture","UI Design"]}
+              />
+              <Person
                 name="Elizabeth Wood"
                 location="Brooklyn"
                 position="Wordsmith"
@@ -190,6 +198,20 @@ export const query = graphql`
       }
     }
     maggieImage: imageSharp(id: { regex: "/maggie_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    joeImage: imageSharp(id: { regex: "/joe_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
