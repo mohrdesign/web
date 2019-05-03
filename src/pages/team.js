@@ -66,20 +66,28 @@ const TeamPage = ({ data }) => {
                 capabilities={["Interaction Design","Visual Design","Prototyping","Frontend Engineering"]}
               />
               <Person
-                name="Joe Pirret"
-                location="New York City"
-                position="Puzzler at Large"
-                desc="This creative problem-solver has been on the loose for 10+ years, injecting stealth product design into every project. At ITP, NYU an innocent design student quickly progressed to the Puzzler he is today. Recently he has been honing his skills to craft the best pancake variations for his wife and their 2-year old daughter. "
-                img={data.joeImage.sizes}
-                capabilities={["Interaction Design","User Research","Information Architecture","UI Design"]}
+                name="Cort Langworthy"
+                location="Denver"
+                position="Flowmaster"
+                desc="Cort makes beautiful experiences flow like music from the toughest design challenges. He's been jamming on designs as long as he can remember, bringing over 30 years of experience to the Mohr Design team. Despite the Dad vibes, Cort is a bit of a savant, keeping his fingers on the pulse of any and all things technology. Outside of work, you can find him fronting his band, Open Space, and enjoying the stunning wilderness of Colorado in his vintage Airstream, fly rod in hand."
+                img={data.cortImage.sizes}
+                capabilities={["Interaction Design","Visual Design","Branding","Usability Testing","Motion Graphics"]}
               />
               <Person
-                name="Elizabeth Wood"
-                location="Brooklyn"
-                position="Wordsmith"
-                desc="“Holli Wood” is a well-known superhero whose use of language can cut like a knife, cure a complicated message and instill meaning in the structure and delivery of everything she touches. She has used her special powers to develop products, platforms, chatbots, apps, sites, services and more for GE, IBM, and frog."
-                img={data.elizabethImage.sizes}
-                capabilities={["Content Strategy","Copywriting","Podcasting","Research & Analysis"]}
+                name="Laura Zimbaldi"
+                location="New York"
+                position="Project Maven"
+                desc="Laura knows how to run a project like she knows the back of her hand. It's fair to say that Laura kicks butt at pretty much everything. She has years of experience working on every kind of project - including jet engines(!!!), and brings a sense of humor and a killer sense of style to her work. When she's not managing to perfection, she's teaching her two boys how to boat, crush it on the ski slopes and sweat awesomeness."
+                img={data.lauraImage.sizes}
+                capabilities={["Project Management","Roadmapping","Design Workshops","Research","Technical & Business Processes"]}
+              />
+              <Person
+                name="Amy Fisher"
+                location="Denver"
+                position="Socialist"
+                desc="Amy is our social media expert and content strategist. With an adventurous spirit and a discerning eye, she distills complicated messages into approachable prose. For 12 years she has been crafting her writing and editing skills in various roles and industries. Amy may be our social guru, but she's more inclined to be scaling a mountain; this gal has summited 15 of Colorado's 14,000-foot peaks."
+                img={data.amyImage.sizes}
+                capabilities={["Content Strategy","Copywriting","Social"]}
               />
             </TeamGrid>
             <PartnerHeader>We partner with some great people.</PartnerHeader>
@@ -211,7 +219,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_tracedSVG
       }
     }
-    joeImage: imageSharp(id: { regex: "/joe_front/" }) {
+    cortImage: imageSharp(id: { regex: "/cort_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
@@ -225,7 +233,21 @@ export const query = graphql`
         ...GatsbyImageSharpSizes_tracedSVG
       }
     }
-    elizabethImage: imageSharp(id: { regex: "/elizabeth_front/" }) {
+    lauraImage: imageSharp(id: { regex: "/laura_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    amyImage: imageSharp(id: { regex: "/amy_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
