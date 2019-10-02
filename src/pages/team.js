@@ -45,7 +45,7 @@ const TeamPage = ({ data }) => {
                 name="Haley Love"
                 location="Portland"
                 position="Aesthetician"
-                desc="Haley is so good at helping people fix their UX hang-ups we call her ‘The Operator.’ With 8 years in the biz, she’s made games, sites, apps and everything else. If you plan to visit Haley, her husband and their 2yr old in beautiful Portland, OR, please bring your own snowboard or Ultimate disc."
+                desc="Haley is so good at helping people fix their UX hang-ups we call her &quot;The Operator.&quot; With 8 years in the biz, she’s made games, sites, apps and everything else. If you plan to visit Haley, her husband and their 2 year old in beautiful Portland, OR, please bring your own snowboard or Ultimate disc."
                 img={data.haleyImage.sizes}
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
@@ -64,6 +64,14 @@ const TeamPage = ({ data }) => {
                 desc="Alan is based in Brooklyn, New York. Most recently he designed for Spotify and Karma on their in-house teams. Before that, he worked at frog where he led interaction design efforts for fortune 500 clients. He’s a bit of a mystery man but what we do know is he’s insanely dependable, irritatingly level-headed, and incredibly driven. "
                 img={data.alanImage.sizes}
                 capabilities={["Interaction Design","Visual Design","Prototyping","Frontend Engineering"]}
+              />
+              <Person
+                name="Julynn Benedetti"
+                location="Portland"
+                position="UX Artisan"
+                desc="For Julynn, finally figuring out she was a designer was like finding out she got into Hogwarts. In her past life, she was a small town girl from Texas, a French and History double major, and an officer in the Air Force. Now Julynn works her magic by creating beautiful, intuitive experiences for frog design, AOL and most recently, Apple. In her free time, she thoroughly enjoys instigating impromptu arm wrestling tournaments, beating her husband at board games, and reading books (complete with accents and voices) aloud to her kids."
+                img={data.julynnImage.sizes}
+                capabilities={["User Experience Design","User Interface Design","Research"]}
               />
               <Person
                 name="Cort Langworthy"
@@ -195,6 +203,20 @@ export const query = graphql`
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    julynnImage: imageSharp(id: { regex: "/julynn_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80  }
         quality: 80
         traceSVG: {
           color: "#A6A8AF"
