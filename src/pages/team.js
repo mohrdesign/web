@@ -74,12 +74,28 @@ const TeamPage = ({ data }) => {
                 capabilities={["User Experience Design","User Interface Design","Research"]}
               />
               <Person
+                name="Sam Kang"
+                location="New York"
+                position="The Mechanic"
+                desc="Sam has a natural curiosity which started as a kid taking apart and putting back together all the machines in his house. It later manifested itself through digital games, multi user experiences, and online entertainment for all ages. These days that curiosity helps drive serious change for serious clients (and the not so serious). Off the clock, Sam hangs out with his two kids and wife in glorious Northern New Jersey."
+                img={data.samImage.sizes}
+                capabilities={["Interaction Design","Visual Design","Branding","Motion Design","Prototyping"]}
+              />
+              <Person
                 name="Cort Langworthy"
                 location="Denver"
                 position="Flowmaster"
                 desc="Cort makes beautiful experiences flow like music from the toughest design challenges. He's been jamming on designs as long as he can remember, bringing over 30 years of experience to the Mohr Design team. Despite the Dad vibes, Cort is a bit of a savant, keeping his fingers on the pulse of any and all things technology. Outside of work, you can find him fronting his band, Open Space, and enjoying the stunning wilderness of Colorado in his vintage Airstream, fly rod in hand."
                 img={data.cortImage.sizes}
                 capabilities={["Interaction Design","Visual Design","Branding","Usability Testing","Motion Graphics"]}
+              />
+              <Person
+                name="Jorge De La Garza"
+                location="Brooklyn"
+                position="Project Doula"
+                desc="Jorge has been supporting projects for years, guiding their growth and transition with care and enthusiasm. His experience is wide-ranging, including product and process design, media strategy development, content creation, and experiential event production. When he’s not talking about contracts and timelines, he's creating project plans for complicated dinners, testing recipes, and working on his faux taxidermy obsession."
+                img={data.jorgeImage.sizes}
+                capabilities={["Project Management","Roadmapping","Design Workshops","Research", "Technical & Business Processes"]}
               />
               <Person
                 name="Laura Zimbaldi"
@@ -242,6 +258,34 @@ export const query = graphql`
       }
     }
     cortImage: imageSharp(id: { regex: "/cort_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    samImage: imageSharp(id: { regex: "/sam_front/" }) {
+      sizes(
+        maxWidth: 1200
+        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+        quality: 80
+        traceSVG: {
+          color: "#A6A8AF"
+          turdSize: 0
+          background: "#8CFFE6"
+        }
+      ) {
+        ...GatsbyImageSharpSizes_tracedSVG
+      }
+    }
+    jorgeImage: imageSharp(id: { regex: "/jorge_front/" }) {
       sizes(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
