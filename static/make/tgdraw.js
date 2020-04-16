@@ -4,7 +4,7 @@ var p; // shortcut to reference prototypes
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"tgdraw_atlas_", frames: [[0,0,2048,2048]]},
-		{name:"tgdraw_atlas_2", frames: [[572,1476,252,57],[288,1320,282,280],[0,1320,286,286],[572,1320,280,76],[572,1398,280,76],[854,1398,106,57],[0,0,1318,1318],[826,1476,80,76],[854,1320,80,76],[936,1320,37,57],[572,1535,37,57],[611,1535,37,57],[1320,1026,512,512],[1320,0,683,1024]]}
+		{name:"tgdraw_atlas_2", frames: [[0,1320,2048,150],[0,1472,338,126],[1260,1472,271,30],[1608,1026,282,280],[1320,1026,286,286],[1892,1132,116,100],[922,1472,116,100],[1892,1234,48,54],[0,0,1318,1318],[1040,1472,116,100],[1892,1026,120,104],[340,1472,418,100],[1320,0,683,1024],[760,1472,160,200],[1158,1472,100,93]]}
 ];
 
 
@@ -12,97 +12,97 @@ lib.ssMetadata = [
 
 
 
-(lib.CachedBmp_9 = function() {
+(lib.CachedBmp_38 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(0);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_8 = function() {
+(lib.CachedBmp_37 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_7 = function() {
+(lib.CachedBmp_36 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(2);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_6 = function() {
+(lib.CachedBmp_32 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(3);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_5 = function() {
+(lib.CachedBmp_31 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(4);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_4 = function() {
+(lib.CachedBmp_30 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(5);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_3 = function() {
-	this.initialize(ss["tgdraw_atlas_"]);
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.CachedBmp_10 = function() {
-	this.initialize(img.CachedBmp_10);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,2048,2200);
-
-
-(lib.CachedBmp_2 = function() {
+(lib.CachedBmp_29 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(6);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_15 = function() {
+(lib.CachedBmp_39 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(7);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_14 = function() {
+(lib.CachedBmp_27 = function() {
+	this.initialize(ss["tgdraw_atlas_"]);
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.CachedBmp_26 = function() {
+	this.initialize(img.CachedBmp_26);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,2048,2200);
+
+
+(lib.CachedBmp_25 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(8);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_13 = function() {
+(lib.CachedBmp_24 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(9);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_12 = function() {
+(lib.CachedBmp_23 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(10);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.CachedBmp_11 = function() {
+(lib.CachedBmp_35 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(11);
 }).prototype = p = new cjs.Sprite();
@@ -115,16 +115,23 @@ p.nominalBounds = new cjs.Rectangle(0,0,2048,2200);
 p.nominalBounds = new cjs.Rectangle(0,0,3558,338);
 
 
-(lib.Bitmap2 = function() {
+(lib.Bitmap4 = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(12);
 }).prototype = p = new cjs.Sprite();
 
 
 
-(lib.Bitmap4 = function() {
+(lib._delete = function() {
 	this.initialize(ss["tgdraw_atlas_2"]);
 	this.gotoAndStop(13);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.Group = function() {
+	this.initialize(ss["tgdraw_atlas_2"]);
+	this.gotoAndStop(14);
 }).prototype = p = new cjs.Sprite();
 // helper functions:
 
@@ -163,10 +170,10 @@ function getMCSymbolPrototype(symbol, nominalBounds, frameBounds) {
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(1).call(this.frame_1).wait(1).call(this.frame_2).wait(1));
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_7();
+	this.instance = new lib.CachedBmp_31();
 	this.instance.setTransform(-141.45,-141.15,0.5,0.5);
 
-	this.instance_1 = new lib.CachedBmp_8();
+	this.instance_1 = new lib.CachedBmp_32();
 	this.instance_1.setTransform(-140.45,-140.15,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},2).wait(1));
@@ -181,21 +188,55 @@ p.nominalBounds = new cjs.Rectangle(-141.4,-141.1,143,143);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.Bitmap2();
-	this.instance.setTransform(0,0,0.0484,0.0484);
+	this.instance = new lib.Group();
+	this.instance.setTransform(0,0,0.27,0.27);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.saveicon, new cjs.Rectangle(0,0,24.8,24.8), null);
+}).prototype = getMCSymbolPrototype(lib.saveicon, new cjs.Rectangle(0,0,27,25.1), null);
+
+
+(lib.mohrlogo = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer_1
+	this.instance = new lib.CachedBmp_36();
+	this.instance.setTransform(3.25,8.9,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	// Layer_2
+	this.instance_1 = new lib.CachedBmp_37();
+	this.instance_1.setTransform(-10.95,-13,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.mohrlogo, new cjs.Rectangle(-10.9,-13,169,63), null);
+
+
+(lib.deleteicon = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer_1
+	this.instance = new lib.CachedBmp_39();
+	this.instance.setTransform(0.5,5.55,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+	this._renderFirstFrame();
+
+}).prototype = getMCSymbolPrototype(lib.deleteicon, new cjs.Rectangle(0.5,5.6,24,27), null);
 
 
 (lib.container = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_3();
+	this.instance = new lib.CachedBmp_27();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -209,7 +250,7 @@ p.nominalBounds = new cjs.Rectangle(-141.4,-141.1,143,143);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_2();
+	this.instance = new lib.CachedBmp_25();
 	this.instance.setTransform(12.7,8.75,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -223,7 +264,7 @@ p.nominalBounds = new cjs.Rectangle(-141.4,-141.1,143,143);
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
-	this.instance = new lib.CachedBmp_10();
+	this.instance = new lib.CachedBmp_26();
 	this.instance.setTransform(0,0,0.5,0.5);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
@@ -233,34 +274,18 @@ p.nominalBounds = new cjs.Rectangle(-141.4,-141.1,143,143);
 }).prototype = getMCSymbolPrototype(lib.colorpickerbg, new cjs.Rectangle(0,0,1024,1100), null);
 
 
-(lib.clearbutton = function(mode,startPosition,loop) {
+(lib.btncolor = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Layer_5
-	this.instance = new lib.CachedBmp_11();
-	this.instance.setTransform(10.9,5.7,0.5,0.5);
-
-	this.instance_1 = new lib.CachedBmp_12();
-	this.instance_1.setTransform(10.9,2.7,0.5,0.5);
-
-	this.instance_2 = new lib.CachedBmp_13();
-	this.instance_2.setTransform(10.9,5.7,0.5,0.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance}]}).to({state:[{t:this.instance_1}]},1).to({state:[{t:this.instance_2}]},1).wait(2));
-
 	// Layer_1
-	this.instance_3 = new lib.CachedBmp_14();
-	this.instance_3.setTransform(0,0,0.5,0.5);
+	this.instance = new lib.CachedBmp_35();
+	this.instance.setTransform(25,-0.05,0.5,0.5);
 
-	this.instance_4 = new lib.CachedBmp_15();
-	this.instance_4.setTransform(0,0,0.5,0.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_3}]}).to({state:[{t:this.instance_4}]},2).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,40,38);
+}).prototype = getMCSymbolPrototype(lib.btncolor, new cjs.Rectangle(25,0,209,50), null);
 
 
 (lib.gridm = function(mode,startPosition,loop) {
@@ -1141,33 +1166,27 @@ p.nominalBounds = new cjs.Rectangle(0,0,40,38);
 (lib.downloadbutton = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
-	// Layer_3
-	this.instance = new lib.CachedBmp_4();
-	this.instance.setTransform(58.55,6.05,0.5,0.5);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(4));
-
 	// Layer_2
-	this.instance_1 = new lib.saveicon();
-	this.instance_1.setTransform(21.4,19.4,1,1,0,0,0,12.4,12.4);
-	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 255, 255, 255, 0)];
-	this.instance_1.cache(-2,-2,29,29);
+	this.instance = new lib.saveicon();
+	this.instance.setTransform(28.4,27.4,1,1,0,0,0,12.4,12.4);
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 255, 255, 255, 0)];
+	this.instance.cache(-2,-2,31,29);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({y:16.9},0).wait(1).to({y:21.9},0).wait(2));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1).to({y:25.4},0).wait(1).to({y:27.4},0).wait(2));
 
 	// Layer_1
-	this.instance_2 = new lib.CachedBmp_5();
+	this.instance_1 = new lib.CachedBmp_29();
+	this.instance_1.setTransform(0,0,0.5,0.5);
+
+	this.instance_2 = new lib.CachedBmp_30();
 	this.instance_2.setTransform(0,0,0.5,0.5);
 
-	this.instance_3 = new lib.CachedBmp_6();
-	this.instance_3.setTransform(0,0,0.5,0.5);
-
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(2));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_1}]}).to({state:[{t:this.instance_2}]},2).wait(2));
 
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(0,0,140,38);
+p.nominalBounds = new cjs.Rectangle(0,0,58,50);
 
 
 (lib.cpickersmall = function(mode,startPosition,loop) {
@@ -1214,36 +1233,78 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 }).prototype = getMCSymbolPrototype(lib.cpicker, new cjs.Rectangle(0,0,1024,1100), null);
 
 
+(lib.clearbutton = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer_2
+	this.instance = new lib.deleteicon();
+	this.instance.setTransform(29.2,24.4,1,1,0,0,0,13.2,16.4);
+	this.instance._off = true;
+	this.instance.filters = [new cjs.ColorFilter(0, 0, 0, 1, 255, 255, 255, 0)];
+	this.instance.cache(-1,4,28,31);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(2).to({_off:false},0).wait(2));
+
+	// Layer_4
+	this.instance_1 = new lib.deleteicon();
+	this.instance_1.setTransform(16,8);
+	this.instance_1.filters = [new cjs.ColorFilter(0, 0, 0, 1, 1, 78, 180, 0)];
+	this.instance_1.cache(-1,4,28,31);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(1).to({regX:13.2,regY:16.4,x:29.2,y:22.4},0).to({_off:true},1).wait(2));
+
+	// Layer_1
+	this.instance_2 = new lib.CachedBmp_23();
+	this.instance_2.setTransform(-1,-1,0.5,0.5);
+
+	this.instance_3 = new lib.CachedBmp_24();
+	this.instance_3.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.instance_2}]}).to({state:[{t:this.instance_3}]},2).wait(2));
+
+	this._renderFirstFrame();
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1,-1,60,52);
+
+
 (lib.utils = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 
 	// Layer_1
+	this.btncolor0 = new lib.btncolor();
+	this.btncolor0.name = "btncolor0";
+	this.btncolor0.setTransform(503.6,37.05,1,1,180,0,0,59.9,24.9);
+
+	this.btncolor1 = new lib.btncolor();
+	this.btncolor1.name = "btncolor1";
+	this.btncolor1.setTransform(525.7,36.9,1,1,0,0,0,59.9,24.9);
+
+	this.logo = new lib.mohrlogo();
+	this.logo.name = "logo";
+	this.logo.setTransform(82,34.7,1,1,0,0,0,63,14.3);
+
 	this.btnclear = new lib.clearbutton();
 	this.btnclear.name = "btnclear";
-	this.btnclear.setTransform(562.15,-4);
+	this.btnclear.setTransform(857.65,12);
 	new cjs.ButtonHelper(this.btnclear, 0, 1, 2, false, new lib.clearbutton(), 3);
-
-	this.btncolor1 = new lib.wedgeeighth();
-	this.btncolor1.name = "btncolor1";
-	this.btncolor1.setTransform(496.85,15,0.2699,0.6459,90,0,0,-70,-69.8);
-
-	this.btncolor0 = new lib.wedgeeighth();
-	this.btncolor0.name = "btncolor0";
-	this.btncolor0.setTransform(477.4,15,0.2699,0.6459,-90,0,0,-70,-69.8);
-
-	this.instance = new lib.CachedBmp_9();
-	this.instance.setTransform(0,0.4,0.5,0.5);
 
 	this.btnsave = new lib.downloadbutton();
 	this.btnsave.name = "btnsave";
-	this.btnsave.setTransform(850.25,-4);
+	this.btnsave.setTransform(945.25,12);
 	new cjs.ButtonHelper(this.btnsave, 0, 1, 2, false, new lib.downloadbutton(), 3);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.btnsave},{t:this.instance},{t:this.btncolor0},{t:this.btncolor1},{t:this.btnclear}]}).wait(1));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.btnsave},{t:this.btnclear},{t:this.logo},{t:this.btncolor1},{t:this.btncolor0}]}).wait(1));
+
+	// Layer_2
+	this.instance = new lib.CachedBmp_38();
+	this.instance.setTransform(0,0,0.5,0.5);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
 	this._renderFirstFrame();
 
-}).prototype = getMCSymbolPrototype(lib.utils, new cjs.Rectangle(0,-4.3,990.3,38.599999999999994), null);
+}).prototype = getMCSymbolPrototype(lib.utils, new cjs.Rectangle(0,0,1024,75), null);
 
 
 // stage content:
@@ -1262,6 +1323,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 		Main.prototype.grid;
 		
 		Main.prototype.utils;
+		Main.prototype.states;
 		Main.prototype.tempobj;
 		Main.prototype.ctx;
 		function Main() {
@@ -1271,6 +1333,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 			this.grid = new lib.gridm();
 			
 			this.utils = exportRoot.utils;	
+			//this.states = exportRoot.states;
 			//this.savecanvas = document.createElement('canvas');
 			//this.savecanvas.width=1024;
 			//this.savecanvas.height=1024;
@@ -1299,14 +1362,17 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 			this.utils.btncolor1.addEventListener("click",this.opencpicker.bind(this));
 			this.utils.btnclear.addEventListener("click",this.cleardraw.bind(this));
 			
+			this.utils.logo.addEventListener("click",this.logoclick.bind(this));
 			
-			gsap.to(this.utils.btncolor0,{duration:.1, easel:{tint:this.color0, tintAmount:this.tintamount}});
-			gsap.to(this.utils.btncolor1,{duration:.1, easel:{tint:this.color1, tintAmount:this.tintamount}});
+			var tempbtn
+			var state = getCookie("state");
+			
 			
 			
 			//alert(exportRoot.numChildren);
 			for(i=0; i<this.grid.numChildren;i++){
 				this.tempobj = this.grid.getChildAt(i);
+				
 				this.tempobj.cache(-145,-145,145,145);
 				this.tempobj.uncache();
 				this.tempobj.mouseChildren = false;
@@ -1314,7 +1380,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 				this.tempobj.addEventListener("mousedown", this.domouse.bind(this));
 				//tempobj.addEventListener("rollout", this.domouse.bind(this));
 				this.tempobj.addEventListener("pressup", this.domouse.bind(this));
-				gsap.to(this.tempobj,{duration: .2, delay:(i*.005), easel:{tint:this.color0, tintAmount:this.tintamount}});
+				if(!state)gsap.to(this.tempobj,{duration: .2, delay:(i*.005), easel:{tint:this.color0, tintAmount:this.tintamount}});
 				
 				//tempobj.addEventListener("mouseover", this.domouse.bind(this));
 				//alert("initmouse" + i);
@@ -1322,23 +1388,123 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 				//Boxes.push(tempobj);
 				
 			};
+			if(state)this.setstate(state);
+		/*	for(i=1; i<=4;i++){
+				tempbtn = this.states.getChildByName("btn"+i);
+				tempbtn.btnlabel.text = i;
+				tempbtn.stateint = i;
+				tempbtn.state="";
+				tempbtn.mouseChildren = false;
+				tempbtn.addEventListener("click",this.checkstate.bind(this));
+			}*/
 			
+			gsap.to(this.utils.btncolor0,{duration:.1, easel:{tint:this.color0, tintAmount:this.tintamount}});
+			gsap.to(this.utils.btncolor1,{duration:.1, easel:{tint:this.color1, tintAmount:this.tintamount}});
 			exportRoot.utils.btnsave.addEventListener("click", this.dosave.bind(this));
 			//exportRoot.utils.visible = false;
 			//this.initmouse();
+			
+			
 		};
+		
+		Main.prototype.statenum = 0;
+		//Main.prototype.checkstate = function(e){
+		//	var tempbtn = e.target;
+		//	//alert(tempbtn);
+		//	var tempbtnold;
+		//	if(tempbtn.stateint == this.statenum){
+		//		this.statenum = 0;
+		//		tempbtn.gotoAndStop(0);
+		//		tempbtn.state = "";
+		//		return;
+		//	}
+		//	if (tempbtn.state=="" && tempbtn.stateint !=this.statenum){
+		//		tempbtn.state = this.getstate();
+		//		
+		//		tempbtnold = this.states.getChildByName("btn"+this.statenum);
+		//		if(tempbtnold)tempbtnold.gotoAndStop(1);
+		//		tempbtn.gotoAndStop(2);
+		//		this.statenum = tempbtn.stateint;
+		//		return;
+		//	}
+		//	if (tempbtn.state!="" && tempbtn.stateint != this.statenum){
+		//		
+		//		tempbtnold = this.states.getChildByName("btn"+this.statenum);
+		//		if(tempbtnold)tempbtnold.gotoAndStop(1);
+		//		this.setstate(tempbtn.state);
+		//		tempbtn.gotoAndStop(2);
+		//		this.statenum = tempbtn.stateint;
+		//	}
+		//}
+		
+		Main.prototype.getstate = function(){
+			var statestring="";
+			for(i=0; i<this.grid.numChildren;i++){
+				this.tempobj = this.grid.getChildAt(i);
+				statestring+=this.tempobj.boxframe;
+				statestring+=",";
+				
+			};
+			statestring +=this.color0+",";
+			statestring +=this.color1;
+			//console.trace(statestring);
+			return statestring;
+		}
+		
+		
+		Main.prototype.setstate = function(state){
+			//alert("setstate");
+			console.trace(state);
+			statearray = state.split(",");
+			for(var i=0;i<statearray.length-2;i++){
+				this.tempobj = this.grid.getChildAt(i);
+				if(this.tempobj)this.tempobj.boxframe = statearray[i];
+			}
+			this.color0 = statearray[statearray.length-2];
+			this.color1 = statearray[statearray.length-1];
+			
+			this.refreshgrid(false,true);
+		}
+		
+		Main.prototype.logoclick = function(e){
+			window.open('http://mohr.design', '_blank');
+		}
+		
 		
 		Main.prototype.dosave = function(e){
 			//alert("btnsave");
 			//this.grid.cache();
 			exportRoot.container.cache(0,0,1024,1024);
-			this.download(stage.canvas,"tgdrawing.png");
+			this.download(stage.canvas,"MakeMohrDrawing.png");
 			exportRoot.container.uncache();
 			//var image = stage.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 			//var image = this.grid.getCacheDataURL()//.replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 			//window.location.download="tgdraw.png";
 			//window.location.href=image;
 		};
+		
+		function setCookie(cname, cvalue, exdays) {
+		  var d = new Date();
+		  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+		  var expires = "expires="+ d.toUTCString();
+		  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+		}
+		
+		function getCookie(cname) {
+		  var name = cname + "=";
+		  var decodedCookie = decodeURIComponent(document.cookie);
+		  var ca = decodedCookie.split(';');
+		  for(var i = 0; i <ca.length; i++) {
+		    var c = ca[i];
+		    while (c.charAt(0) == ' ') {
+		      c = c.substring(1);
+		    }
+		    if (c.indexOf(name) == 0) {
+		      return c.substring(name.length, c.length);
+		    }
+		  }
+		  return "";
+		}
 		
 		
 		
@@ -1349,7 +1515,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 		Main.prototype.update = function(e){
 		  if(this.ismousedown){
 			 // alert(stage.scaleX);
-			  this.boxobj = this.grid.getObjectUnderPoint((stage.mouseX+this.grid.x)/stage.scaleX,(stage.mouseY+this.grid.y)/stage.scaleY,1);
+			  this.boxobj = this.grid.getObjectUnderPoint((stage.mouseX)/stage.scaleX,(stage.mouseY)/stage.scaleY,1);
 			  if(this.boxobj.boxframe != this.boxframe){
 				  this.boxobj.boxframe = this.boxframe;
 					TweenLite.to(this.boxobj,this.tintspeed,{easel:{tint:this["color"+this.boxobj.boxframe], tintAmount:this.tintamount}});
@@ -1367,6 +1533,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 		
 		Main.prototype.domouse= function(e){
 			this.boxobj = e.target;
+			console.trace(e.type);
 			//alert(e.type);
 			switch(e.type){
 				case "mousedown":
@@ -1394,6 +1561,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 				
 				case "pressup":
 					this.ismousedown = false;
+					setCookie("state",this.getstate(),356);
+					
 					//exportRoot.container.cache(0,0,1024,1024);
 					return;
 					
@@ -1460,9 +1629,11 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 		
 			var cpobj = this.cpick.getObjectUnderPoint((stage.mouseX+this.cpick.x)/stage.scaleX,(stage.mouseY+this.cpick.y)/stage.scaleY,1);
 			
-			//if(cpobj == this.cpick.colorwheel){
+			if(cpobj == this.cpick.colorwheel){
 			//	stage.canvas.getContext('2d').drawImage(stage.canvas,stage.mouseX, stage.mouseY,100,100);
 				//alert(stage.mouseX/stage.canvas.width*238);
+				//console.trace(cpcanvas.width);
+				//console.trace(stage.mouseY/stage.canvas.height);
 				var img_data = getpixel(stage.mouseX/stage.canvas.width*cpcanvas.width, stage.mouseY/stage.canvas.height*cpcanvas.height,4,4);//document.getElementById("cpcanvas").getContext('2d').getImageData(0, 0, 100, 100).data;
 				var R = img_data[0];
 				var G = img_data[1];
@@ -1472,7 +1643,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 				//alert(R);
 				this["color"+this.colorpickint] = hex;//"#333333";//
 		
-			//};
+			};
 			
 			this.refreshgrid();
 			
@@ -1490,9 +1661,12 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 			this.refreshgrid(true);
 		}
 		
-		Main.prototype.refreshgrid = function(clear=false){
+		Main.prototype.refreshgrid = function(clear=false,instant=false){
 			var j=0;
 			var tobj;
+			var temptime;
+			if(instant)temptime = .0001;
+			else temptime = .2
 			for(i=0; i<this.grid.numChildren;i++){
 				tobj = this.grid.getChildAt(i);
 				
@@ -1501,9 +1675,9 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 						j++
 						tobj.boxframe = 0;
 					};
-					gsap.to(tobj,{duration: .2, delay:(j*.005), easel:{tint:this.color0, tintAmount:this.tintamount}});
+					gsap.to(tobj,{duration: temptime, delay:(j*.005), easel:{tint:this.color0, tintAmount:this.tintamount}});
 				}else{
-					gsap.to(tobj,{duration: .2, delay:(i*.005), easel:{tint:this["color"+tobj.boxframe], tintAmount:this.tintamount}});
+					gsap.to(tobj,{duration: temptime, delay:(i*.005), easel:{tint:this["color"+tobj.boxframe], tintAmount:this.tintamount}});
 				};
 				
 				//tempobj.addEventListener("mouseover", this.domouse.bind(this));
@@ -1512,6 +1686,8 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 				//Boxes.push(tempobj);
 				
 			};
+		
+			setCookie("state",this.getstate(),356);
 			
 			gsap.to(this.utils.btncolor0,{duration:.1,easel:{tint:this.color0, tintAmount:this.tintamount}});
 			gsap.to(this.utils.btncolor1,{duration:.1,easel:{tint:this.color1, tintAmount:this.tintamount}});
@@ -1535,7 +1711,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 	// Layer_1
 	this.utils = new lib.utils();
 	this.utils.name = "utils";
-	this.utils.setTransform(514.4,1063.85,1,1,0,0,0,495.2,19);
+	this.utils.setTransform(495.2,1044,1,1,0,0,0,495.2,19);
 
 	this.container = new lib.container();
 	this.container.name = "container";
@@ -1546,7 +1722,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,140,38);
 	this._renderFirstFrame();
 
 }).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(512,550,512,529.2);
+p.nominalBounds = new cjs.Rectangle(512,550,512,550);
 // library properties:
 lib.properties = {
 	id: 'A9CEEA8687894A798FD7CAFE26FEEBEB',
@@ -1556,10 +1732,10 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_10.png?1586649080176", id:"CachedBmp_10"},
-		{src:"images/Bitmap1.png?1586649080176", id:"Bitmap1"},
-		{src:"images/tgdraw_atlas_.png?1586649080095", id:"tgdraw_atlas_"},
-		{src:"images/tgdraw_atlas_2.png?1586649080095", id:"tgdraw_atlas_2"}
+		{src:"images/CachedBmp_26.png?1587070542381", id:"CachedBmp_26"},
+		{src:"images/Bitmap1.png?1587070542381", id:"Bitmap1"},
+		{src:"images/tgdraw_atlas_.png?1587070542290", id:"tgdraw_atlas_"},
+		{src:"images/tgdraw_atlas_2.png?1587070542291", id:"tgdraw_atlas_2"}
 	],
 	preloads: []
 };
