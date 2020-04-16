@@ -1467,6 +1467,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,60,52);
 		}
 		
 		Main.prototype.logoclick = function(e){
+			ga('send','event','MakeMohr','logoclick');
 			window.open('http://mohr.design', '_blank');
 		}
 		
@@ -1477,6 +1478,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,60,52);
 			exportRoot.container.cache(0,0,1024,1024);
 			this.download(stage.canvas,"MakeMohrDrawing.png");
 			exportRoot.container.uncache();
+			ga('send','event','MakeMohr','save');
 			//var image = stage.canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 			//var image = this.grid.getCacheDataURL()//.replace("image/png", "image/octet-stream");  // here is the most important part because if you dont replace you will get a DOM 18 exception.
 			//window.location.download="tgdraw.png";
@@ -1642,6 +1644,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,60,52);
 				var hex = this.rgbToHex(R,G,B);
 				//alert(R);
 				this["color"+this.colorpickint] = hex;//"#333333";//
+				ga('send','event','MakeMohr','changecolor');
 		
 			};
 			
@@ -1659,6 +1662,7 @@ p.nominalBounds = new cjs.Rectangle(-1,-1,60,52);
 		
 		Main.prototype.cleardraw = function(e){
 			this.refreshgrid(true);
+			ga('send','event','MakeMohr','clear');
 		}
 		
 		Main.prototype.refreshgrid = function(clear=false,instant=false){
@@ -1732,10 +1736,10 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_26.png?1587070542381", id:"CachedBmp_26"},
-		{src:"images/Bitmap1.png?1587070542381", id:"Bitmap1"},
-		{src:"images/tgdraw_atlas_.png?1587070542290", id:"tgdraw_atlas_"},
-		{src:"images/tgdraw_atlas_2.png?1587070542291", id:"tgdraw_atlas_2"}
+		{src:"images/CachedBmp_26.png?1587080953390", id:"CachedBmp_26"},
+		{src:"images/Bitmap1.png?1587080953390", id:"Bitmap1"},
+		{src:"images/tgdraw_atlas_.png?1587080953303", id:"tgdraw_atlas_"},
+		{src:"images/tgdraw_atlas_2.png?1587080953303", id:"tgdraw_atlas_2"}
 	],
 	preloads: []
 };
