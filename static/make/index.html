@@ -21,6 +21,7 @@
 	top:0;bottom:0;
   }
 </style>
+<script src="lz-string.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/EaselPlugin.min.js"></script>
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
@@ -62,7 +63,7 @@ function handleComplete(evt,comp) {
 	for(i=0; i<ssMetadata.length; i++) {
 		ss[ssMetadata[i].name] = new createjs.SpriteSheet( {"images": [queue.getResult(ssMetadata[i].name)], "frames": ssMetadata[i].frames} )
 	}
-	exportRoot = new lib.TGramDraw_html();
+	exportRoot = new lib.TGramDraw_3COL_html();
 	stage = new lib.Stage(canvas);	
 	//Registers the "tick" event listener.
 	fnStartAnimation = function() {
