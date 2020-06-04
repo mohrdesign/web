@@ -1687,7 +1687,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,58,50);
 			gsap.to(this.utils,{duration:.5, y:1200});
 			$.ajax({
 			  type: "POST",
-			  url: "http://scienceninja.com/tgdraw/save.php",
+			  url: "https://scienceninja.com/tgdraw/save.php",
 			  data: { 
 				 imgBase64: dataURL,
 				  fname:mmdfn
@@ -2066,11 +2066,11 @@ lib.properties = {
 	color: "#CCCCCC",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/CachedBmp_20copy.png?1590683944068", id:"CachedBmp_20copy"},
-		{src:"images/CachedBmp_20.png?1590683944068", id:"CachedBmp_20"},
-		{src:"images/Bitmap1.png?1590683944068", id:"Bitmap1"},
-		{src:"images/tgdraw_atlas_.png?1590683943899", id:"tgdraw_atlas_"},
-		{src:"images/tgdraw_atlas_2.png?1590683943899", id:"tgdraw_atlas_2"}
+		{src:"images/CachedBmp_20copy.png?1591297269997", id:"CachedBmp_20copy"},
+		{src:"images/CachedBmp_20.png?1591297269997", id:"CachedBmp_20"},
+		{src:"images/Bitmap1.png?1591297269997", id:"Bitmap1"},
+		{src:"images/tgdraw_atlas_.png?1591297269810", id:"tgdraw_atlas_"},
+		{src:"images/tgdraw_atlas_2.png?1591297269810", id:"tgdraw_atlas_2"}
 	],
 	preloads: []
 };
