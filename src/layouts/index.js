@@ -20,6 +20,7 @@ const TemplateWrapper = ({ children }) => (
         },
       ]}
     >
+      <html lang="en" />
       <script src="/modernizr.js" type="text/javascript" />
     </Helmet>
     {children()}
