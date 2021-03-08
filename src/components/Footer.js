@@ -27,6 +27,7 @@ class Footer extends React.Component {
                   <ul>
                     <li><FooterLink to='/expertise'>Expertise</FooterLink></li>
                     <li><FooterLink to='/team'>Team</FooterLink></li>
+                    {/* <li><FooterLink to='/accessibility-part-one-defaults'>Accessibility</FooterLink></li> */}
                   </ul>
                 </FooterTop>
               )}
@@ -62,7 +63,7 @@ const PopContainer = styled.div`
 `
 
 const MohrFooter = styled.div`
-  z-index: 20;
+  z-index: 2;
   padding-bottom: ${props => props.onDark && '2em'};
   @media screen and (min-height: 600px) {
     position: ${props => props.onDark ? 'absolute' : ''};
@@ -116,7 +117,7 @@ const City = styled.button`
 `
 const FooterLeft = styled.div`
   position: relative;
-  z-index: 20;
+  z-index: 2;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -129,7 +130,7 @@ const FooterRight = styled.div`
 `
 const FooterTop = styled.div`
   position: relative;
-  z-index: 20;
+  z-index: 2;
   flex-basis: 100%;
   font-size: 1.2em;
   & li {

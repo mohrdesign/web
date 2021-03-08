@@ -19,6 +19,7 @@ export const Header = (props) => {
         <ul>
           <li><NavLink {...props} activeStyles={activeStyling} to='/expertise'>Expertise</NavLink></li>
           <li><NavLink {...props} activeStyles={activeStyling} to='/team'>Team</NavLink></li>
+          {/* <li><NavLink {...props} activeStyles={activeStyling} to='/accessibility-part-one-defaults'>Accessibility</NavLink></li> */}
           {/* <li><NavLink {...props} activeStyles={activeStyling} to='/contact'>Contact</NavLink></li> */}
         </ul>
       </HeaderRight>
