@@ -14,10 +14,12 @@ import GridImage from '../../static/grid.svg'
 import CircleImage from '../../static/primitive-circle.svg'
 import TriangleImage from '../../static/primitive-triangle.svg'
 import { breakpoint } from '../layouts/breakpoints'
+import Layout from '../layouts/index'
+import { graphql } from 'gatsby'
 
 const TeamPage = ({ data }) => {
     return (
-      <div>
+      <Layout>
         <ContentContainer><Header/></ContentContainer>
           <Helmet>
             <html className="secondarypage"/>
@@ -159,14 +161,14 @@ const TeamPage = ({ data }) => {
           </Section>
           <ContactSection/>
           <Footer/>
-      </div>
+      </Layout>
     )
   }
 
 export const query = graphql`
   query BlurUpQuery {
-    alanImage: imageSharp(id: { regex: "/alan_front/" }) {
-      sizes(
+    alanImage: imageSharp(fluid: {originalName: {regex: "/alan_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80  }
         quality: 80
@@ -176,11 +178,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    alishaImage: imageSharp(id: { regex: "/alisha_front/" }) {
-      sizes(
+    alishaImage: imageSharp(fluid: {originalName: {regex: "/alisha_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -190,11 +192,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    andreImage: imageSharp(id: { regex: "/andre_front/" }) {
-      sizes(
+    andreImage: imageSharp(fluid: {originalName: {regex: "/andre_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -204,11 +206,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    haleyImage: imageSharp(id: { regex: "/haley_front/" }) {
-      sizes(
+    haleyImage: imageSharp(fluid: {originalName: {regex: "/haley_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -218,11 +220,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    julynnImage: imageSharp(id: { regex: "/julynn_front/" }) {
-      sizes(
+    julynnImage: imageSharp(fluid: {originalName: {regex: "/julynn_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80  }
         quality: 80
@@ -232,11 +234,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    cortImage: imageSharp(id: { regex: "/cort_front/" }) {
-      sizes(
+    cortImage: imageSharp(fluid: {originalName: {regex: "/cort_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -246,11 +248,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    samImage: imageSharp(id: { regex: "/sam_front/" }) {
-      sizes(
+    samImage: imageSharp(fluid: {originalName: {regex: "/sam_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -260,11 +262,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    jorgeImage: imageSharp(id: { regex: "/jorge_front/" }) {
-      sizes(
+    jorgeImage: imageSharp(fluid: {originalName: {regex: "/jorge_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -274,11 +276,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    lauraImage: imageSharp(id: { regex: "/laura_front/" }) {
-      sizes(
+    lauraImage: imageSharp(fluid: {originalName: {regex: "/laura_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -288,11 +290,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    amyImage: imageSharp(id: { regex: "/amy_front/" }) {
-      sizes(
+    amyImage: imageSharp(fluid: {originalName: {regex: "/amy_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -302,11 +304,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    evanImage: imageSharp(id: { regex: "/hirsch_front/" }) {
-      sizes(
+    evanImage: imageSharp(fluid: {originalName: {regex: "/hirsch_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -316,11 +318,11 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
-    thomasImage: imageSharp(id: { regex: "/thomas_front/" }) {
-      sizes(
+    thomasImage: imageSharp(fluid: {originalName: {regex: "/thomas_front/"}}) {
+      fluid(
         maxWidth: 1200
         duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
         quality: 80
@@ -330,7 +332,7 @@ export const query = graphql`
           background: "#8CFFE6"
         }
       ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+        tracedSVG
       }
     }
   }

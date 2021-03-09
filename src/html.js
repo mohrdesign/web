@@ -1,9 +1,9 @@
 import React from "react"
-import AppleTouchIcon from './static/favicons/apple-touch-icon.png'
-import FavIcon32 from './static/favicons/favicon-32x32.png'
-import FavIcon16 from './static/favicons/favicon-16x16.png'
-import IconManifest from './static/favicons/manifest.json'
-import SafariPinnedTabIcon from './static/favicons/safari-pinned-tab.svg'
+import AppleTouchIcon from '../static/favicon/apple-touch-icon.png'
+import FavIcon32 from '../static/favicon/favicon-32x32.png'
+import FavIcon16 from '../static/favicon/favicon-16x16.png'
+import IconManifest from '../static/favicon/manifest.json'
+import SafariPinnedTabIcon from '../static/favicon/safari-pinned-tab.svg'
 
 
 let stylesStr
@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-module.exports = class HTML extends React.Component {
+class HTML extends React.Component {
   render() {
     let css
     if (process.env.NODE_ENV === `production`) {
@@ -35,14 +35,14 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon}>
-          <link rel="icon" type="image/png" sizes="32x32" href={FavIcon32}>
-          <link rel="icon" type="image/png" sizes="16x16" href={FavIcon16}>
-          <link rel="manifest" href={IconManifest}>
-          <link rel="mask-icon" href={SafariPinnedTabIcon} color="#336cf8">
-          <meta name="apple-mobile-web-app-title" content="Mohr Design">
-          <meta name="application-name" content="Mohr Design">
-          <meta name="theme-color" content="#ffffff">
+          <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon} />
+          <link rel="icon" type="image/png" sizes="32x32" href={FavIcon32} />
+          <link rel="icon" type="image/png" sizes="16x16" href={FavIcon16} />
+          <link rel="manifest" href={IconManifest} />
+          <link rel="mask-icon" href={SafariPinnedTabIcon} color="#336cf8" />
+          <meta name="apple-mobile-web-app-title" content="Mohr Design" />
+          <meta name="application-name" content="Mohr Design" />
+          <meta name="theme-color" content="#ffffff" />
           {this.props.headComponents}
           {css}
         </head>
@@ -59,3 +59,5 @@ module.exports = class HTML extends React.Component {
     )
   }
 }
+
+export default HTML

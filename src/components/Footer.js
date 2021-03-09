@@ -1,12 +1,12 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { FooterLink, FooterEmailLink } from './Links'
 import * as Color from '../utils/colors'
 import styled from 'styled-components'
 import Pin from './Pin'
 import ContentContainer from '../layouts/ContentContainer'
 import { breakpoint } from '../layouts/breakpoints'
-import Popcity from './Popcity'
+// import Popcity from './Popcity'
 import pdxpng from '../assets/images/portland.png'
 import bkpng from '../assets/images/brooklyn.png'
 import dnvpng from '../assets/images/denver.png'
@@ -48,7 +48,7 @@ class Footer extends React.Component {
           </ContentContainer>
         </FooterContainer>
         <PopContainer>
-          <Popcity ref="popcontroller"/>
+          {/* <Popcity ref="popcontroller"/> */}
         </PopContainer>
       </div>
     )

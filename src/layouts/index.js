@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import './index.css'
 
-const TemplateWrapper = ({ children }) => (
+const Layout = ({ children }) => (
   <div>
     <Helmet
       title="Mohr Design"
@@ -23,11 +23,11 @@ const TemplateWrapper = ({ children }) => (
       <html lang="en" />
       <script src="/modernizr.js" type="text/javascript" />
     </Helmet>
-    {children()}
+    {children}
   </div>
 )
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func,
 }
 
@@ -46,4 +46,4 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `
 
-export default TemplateWrapper
+export default Layout

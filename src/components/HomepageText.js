@@ -3,28 +3,28 @@ import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import { breakpoint } from '../layouts/breakpoints'
 import * as Color from '../utils/colors'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { TimelineLite } from 'gsap'
-if (typeof document !== `undefined`) {
-  const SplitText = require("../utils/SplitText");
-}
+// if (typeof document !== `undefined`) {
+//   const SplitText = require("../utils/SplitText");
+// }
 
 class HomepageText extends React.Component {
-  componentDidMount() {
-    const intro = ReactDOM.findDOMNode(this.refs.mount);
-    const tl = new TimelineLite;
-    const text = new SplitText(intro, {type:"words"});
-    const words = text.words;
-    tl.staggerFrom(words, 0.8, {
-      opacity:0,
-      y:10,
-      rotationX:60,
-      ease:Expo.easeOut
-    }, 0.04, "+=0.4");
-    tl.pause();
-    intro.style.visibility = 'visible';
-    tl.resume();
-  }
+  // componentDidMount() {
+  //   const intro = ReactDOM.findDOMNode(this.refs.mount);
+  //   const tl = new TimelineLite;
+  //   const text = new SplitText(intro, {type:"words"}); // eslint-disable-line
+  //   const words = text.words;
+  //   tl.staggerFrom(words, 0.8, {
+  //     opacity:0,
+  //     y:10,
+  //     rotationX:60,
+  //     ease:Expo.easeOut // eslint-disable-line
+  //   }, 0.04, "+=0.4");
+  //   tl.pause();
+  //   intro.style.visibility = 'visible';
+  //   tl.resume();
+  // }
   render() {
     return (
       <Intro ref="mount">
@@ -35,7 +35,7 @@ class HomepageText extends React.Component {
 }
 
 const Intro = styled.h3`
-  visibility: hidden;
+  /* visibility: hidden; */
   color: ${Color.White};
   margin-top: 3em;
   -webkit-font-smoothing: antialiased;

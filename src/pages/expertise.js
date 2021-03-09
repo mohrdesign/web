@@ -15,6 +15,7 @@ import CircleImage from '../../static/primitive-circle-purple.svg'
 import CircleImageSm from '../../static/primitive-circle-small-purple.svg'
 import TriangleImage from '../../static/primitive-triangle-purple.svg'
 import ExpertiseItem from '../components/ExpertiseItem'
+import Layout from '../layouts/index'
 
 class ExpertisePage extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class ExpertisePage extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Layout>
         <ContentContainer><Header/></ContentContainer>
         <Helmet>
           <html className="secondarypage"/>
@@ -68,7 +69,7 @@ class ExpertisePage extends React.Component {
         </ContentContainer>
         <ContactSection dark/>
         <Footer/>
-      </div>
+      </Layout>
     )
   }
 }

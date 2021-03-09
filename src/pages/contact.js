@@ -4,9 +4,10 @@ import * as Color from '../utils/colors'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContentContainer from '../layouts/ContentContainer'
+import Layout from '../layouts/index'
 
 const ContactPage = ({ transition }) => (
-  <div>
+  <Layout>
     <ContentContainer><Header/></ContentContainer>
     <div style={transition && transition.style}>
       <ContentContainer>
@@ -14,7 +15,7 @@ const ContactPage = ({ transition }) => (
       </ContentContainer>
       <Footer/>
     </div>
-  </div>
+  </Layout>
 )
 
 const PageIntro = styled.h3`

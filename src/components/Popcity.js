@@ -24,13 +24,13 @@ function appearAnim(utils) {
     top: "60%",
     rotation: rand(-10, 10),
     force3D: !0,
-    ease: Expo.easeOut
+    ease: Expo.easeOut // eslint-disable-line
   }) );
   tl.add( TweenLite.to(utils.target, 1.5, {
     top: "150%",
     rotation: rand(-20, 20),
     force3D: !0,
-    ease: Expo.easeIn,
+    ease: Expo.easeIn, // eslint-disable-line
     onComplete: utils.options.callback
   }) );
   return tl
@@ -156,7 +156,7 @@ const PopDiv = styled.div`
     clear: both;
   }
   &:after, &:before {
-    content: ''
+    content: '';
     display: table;
   }
 `
