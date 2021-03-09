@@ -10,7 +10,7 @@ class Person extends React.Component {
     return (
       <PersonContainer>
         <ImageContainer>
-          <GatsbyImage image={this.props.img} alt={`Portrait of $${this.props.name}`} />
+          <GatsbyImage image={this.props.img} alt={`Portrait of ${this.props.name}`} />
         </ImageContainer>
         <Bio>
           <Name>{this.props.name}</Name>
