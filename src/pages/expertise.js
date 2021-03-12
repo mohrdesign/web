@@ -15,6 +15,12 @@ import CircleImage from '../../static/primitive-circle-purple.svg'
 import CircleImageSm from '../../static/primitive-circle-small-purple.svg'
 import TriangleImage from '../../static/primitive-triangle-purple.svg'
 import ExpertiseItem from '../components/ExpertiseItem'
+
+import SVGUnderstanding from '../components/svgs/SVGUnderstanding'
+import SVGArticulating from '../components/svgs/SVGArticulating'
+import SVGMaking from '../components/svgs/SVGMaking'
+import SVGExecuting from '../components/svgs/SVGExecuting'
+
 import Layout from '../layouts/index'
 
 class ExpertisePage extends React.Component {
@@ -32,7 +38,8 @@ class ExpertisePage extends React.Component {
           <PageIntro withSubhead>Every project is an opportunity to make things better for our clients and their customers.</PageIntro>
           <Subhead>Here’s a look at how we partner with organizations to create and transform products and services.</Subhead>
           <ExpertiseGrid>
-            <Illustration className="svg-one"><AnimatedSVG bOffset="50px" svg="understanding"/></Illustration>
+            {/* <Illustration className="svg-one"><AnimatedSVG bOffset="50px" svg="understanding"/></Illustration> */}
+            <Illustration className="svg-one"><SVGUnderstanding /></Illustration>
             <ExpertiseItem
               className="content-one"
               name="Understanding"
@@ -40,7 +47,8 @@ class ExpertisePage extends React.Component {
               desc="We plan and conduct human-centered design research to uncover the best audience and opportunity for your offering."
               activities={["Usability Testing & Validation","Ethnographic Research","Competitive Analysis","Heuristic Evaluation"]}
             />
-            <Illustration className="svg-two"><AnimatedSVG svg="articulating"/></Illustration>
+            {/* <Illustration className="svg-two"><AnimatedSVG svg="articulating"/></Illustration> */}
+            <Illustration className="svg-two"><SVGArticulating /></Illustration>
             <ExpertiseItem
               className="content-two"
               name="Articulating"
@@ -48,7 +56,8 @@ class ExpertisePage extends React.Component {
               desc="Before we put pen to paper (or stylus to screen), we carefully frame the problem to align everyone and to set clear measurements."
               activities={["Product & Content Strategy","Roadmap & Opportunity Definition","Personas & Experience Flows","Investor Pitch Decks & Materials"]}
             />
-            <Illustration className="svg-three"><AnimatedSVG svg="making"/></Illustration>
+            {/* <Illustration className="svg-three"><AnimatedSVG svg="making"/></Illustration> */}
+            <Illustration className="svg-three"><SVGMaking /></Illustration>
             <ExpertiseItem
               className="content-three"
               name="Making"
@@ -56,7 +65,8 @@ class ExpertisePage extends React.Component {
               desc="We prototype early and often to quickly validate ideas and create feedback loops from client teams and core users."
               activities={["Information Architecture","UX & Visual Design","Participatory Design Workshops","High- & Low-Fidelity Prototyping", "Concept Validation"]}
             />
-            <Illustration className="svg-four"><AnimatedSVG svg="executing" duration={2400}/></Illustration>
+            {/* <Illustration className="svg-four"><AnimatedSVG svg="executing" duration={2400}/></Illustration> */}
+            <Illustration className="svg-four"><SVGExecuting /></Illustration>
             <ExpertiseItem
               className="content-four"
               name="Executing"

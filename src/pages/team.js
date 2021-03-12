@@ -172,10 +172,9 @@ export const query = graphql`
         gatsbyImageData(
           layout: FULL_WIDTH,
           quality: 80,
-          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
-          transformOptions: {
-            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-          }
+          placeholder: TRACED_SVG,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 },
+          transformOptions: { duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }}
         )
       }
     }
@@ -184,10 +183,9 @@ export const query = graphql`
         gatsbyImageData(
           layout: FULL_WIDTH,
           quality: 80,
-          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
-          transformOptions: {
-            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-          }
+          placeholder: TRACED_SVG,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 },
+          transformOptions: { duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }}
         )
       }
     }

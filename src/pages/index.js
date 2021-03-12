@@ -6,7 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import ContentContainer from '../layouts/ContentContainer'
 import { breakpoint } from '../layouts/breakpoints'
-import HomepageText from '../components/HomepageText'
+import HomepageText from '../components/HomepageTextTransition'
 import Layout from '../layouts/index'
 
 const HomePage = ({ transition }) => (

@@ -34,9 +34,12 @@ class Footer extends React.Component {
                 <ul>
                   <li>
                     <p>
-                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("brooklyn")}>Brooklyn</City> /&nbsp;
+                      {/* <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("brooklyn")}>Brooklyn</City> /&nbsp;
                       <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("denver")}>Denver</City> /&nbsp;
-                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("portland")}>Portland</City>
+                      <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("portland")}>Portland</City> */}
+                      <City {...props}>Brooklyn</City> /&nbsp;
+                      <City {...props}>Denver</City> /&nbsp;
+                      <City {...props}>Portland</City>
                     </p>
                   </li>
                   { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
@@ -99,7 +102,8 @@ const City = styled.button`
   outline: none;
   border: 0;
   color: inherit;
-  cursor: ${props => props.onDark ? 'pointer' : 'auto'};
+  /* cursor: ${props => props.onDark ? 'pointer' : 'auto'}; */
+  cursor: auto;
   font: inherit;
   overflow: visible;
   padding: 0;
@@ -107,12 +111,12 @@ const City = styled.button`
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-  &:hover {
+  /* &:hover {
     color: ${props => props.onDark ? Color.AccentBright : 'inherit'};
   }
   &:active {
     color: ${props => props.onDark ? Color.White : 'inherit'};
-  }
+  } */
 `
 const FooterLeft = styled.div`
   position: relative;
