@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import MtSvgLines from 'react-mt-svg-lines';
 import SVGUnderstanding from './SVGUnderstanding'
 import SVGArticulating from './SVGArticulating'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 import * as Color from '../utils/colors'
 
@@ -71,7 +71,7 @@ const StyledALink = styled.a`
 
 export const NavLink = ({ props, children, to, activeStyles = {}, style = {} }) => {
   return (
-    <StyledNavLink {...props} exact to={to} style={style} activeStyle={activeStyles}>{children}</StyledNavLink>
+    <StyledNavLink {...props} to={to} style={style} activeStyle={activeStyles}>{children}</StyledNavLink>
   )
 }
 

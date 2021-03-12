@@ -14,10 +14,12 @@ import GridImage from '../../static/grid.svg'
 import CircleImage from '../../static/primitive-circle.svg'
 import TriangleImage from '../../static/primitive-triangle.svg'
 import { breakpoint } from '../layouts/breakpoints'
+import Layout from '../layouts/index'
+import { graphql } from 'gatsby'
 
 const TeamPage = ({ data }) => {
     return (
-      <div>
+      <Layout>
         <ContentContainer><Header/></ContentContainer>
           <Helmet>
             <html className="secondarypage"/>
@@ -30,7 +32,7 @@ const TeamPage = ({ data }) => {
                 location="Denver"
                 position="Stage Director"
                 desc="Alisha has one belief in life: be fierce. She brings this fierceness and relentless enthusiasm to the table, managing teams to see products to the finish line. When she’s not kicking butt organizing a project, you can find her running bazillions of miles around Colorado with her 5yr old on her back."
-                img={data.alishaImage.sizes}
+                img={data.alishaImage.childImageSharp.gatsbyImageData}
                 capabilities={["Project Management","Roadmapping","Design Workshops","Research", "Business & Technical Processes"]}
               />
               <Person
@@ -38,7 +40,7 @@ const TeamPage = ({ data }) => {
                 location="Brooklyn"
                 position="Head Honcho"
                 desc="Andre has a passion for bringing a human experience to a digital world. He has 10+ years doing Product design for frog, Microsoft, and AOL, among others. A native German now residing in NYC, Andre’s (not so) secret resume includes DJ, snowboarder, photographer, sommelier, and father to a well-mannered and opinionated 4yr old."
-                img={data.andreImage.sizes}
+                img={data.andreImage.childImageSharp.gatsbyImageData}
                 capabilities={["Human-Centered Design","Design Workshops","Ideation Facilitation","User Research", "Creative Direction"]}
               />
               <Person
@@ -46,7 +48,7 @@ const TeamPage = ({ data }) => {
                 location="Portland"
                 position="Aesthetician"
                 desc="Haley is so good at helping people fix their UX hang-ups we call her &quot;The Operator.&quot; With 8 years in the biz, she’s made games, sites, apps and everything else. If you plan to visit Haley, her husband and their 2 year old in beautiful Portland, OR, please bring your own snowboard or Ultimate disc."
-                img={data.haleyImage.sizes}
+                img={data.haleyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
               <Person
@@ -54,7 +56,7 @@ const TeamPage = ({ data }) => {
                 location="Brooklyn"
                 position="Pixel Pusher"
                 desc="Alan is based in Brooklyn, New York. Most recently he designed for Spotify and Karma on their in-house teams. Before that, he worked at frog where he led interaction design efforts for fortune 500 clients. He’s a bit of a mystery man but what we do know is he’s insanely dependable, irritatingly level-headed, and incredibly driven. "
-                img={data.alanImage.sizes}
+                img={data.alanImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Prototyping","Frontend Engineering"]}
               />
               <Person
@@ -62,7 +64,7 @@ const TeamPage = ({ data }) => {
                 location="Portland"
                 position="UX Artisan"
                 desc="For Julynn, finally figuring out she was a designer was like finding out she got into Hogwarts. In her past life, she was a small town girl from Texas, a French and History double major, and an officer in the Air Force. Now Julynn works her magic by creating beautiful, intuitive experiences for frog design, AOL and most recently, Apple. In her free time, she thoroughly enjoys instigating impromptu arm wrestling tournaments, beating her husband at board games, and reading books (complete with accents and voices) aloud to her kids."
-                img={data.julynnImage.sizes}
+                img={data.julynnImage.childImageSharp.gatsbyImageData}
                 capabilities={["User Experience Design","User Interface Design","Research"]}
               />
               <Person
@@ -70,7 +72,7 @@ const TeamPage = ({ data }) => {
                 location="New York"
                 position="The Mechanic"
                 desc="Sam has a natural curiosity which started as a kid taking apart and putting back together all the machines in his house. It later manifested itself through digital games, multi user experiences, and online entertainment for all ages. These days that curiosity helps drive serious change for serious clients (and the not so serious). Off the clock, Sam hangs out with his two kids and wife in glorious Northern New Jersey."
-                img={data.samImage.sizes}
+                img={data.samImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Branding","Motion Design","Prototyping"]}
               />
               <Person
@@ -78,7 +80,7 @@ const TeamPage = ({ data }) => {
                 location="Denver"
                 position="Flowmaster"
                 desc="Cort makes beautiful experiences flow like music from the toughest design challenges. He's been jamming on designs as long as he can remember, bringing over 30 years of experience to the Mohr Design team. Despite the Dad vibes, Cort is a bit of a savant, keeping his fingers on the pulse of any and all things technology. Outside of work, you can find him fronting his band, Open Space, and enjoying the stunning wilderness of Colorado in his vintage Airstream, fly rod in hand."
-                img={data.cortImage.sizes}
+                img={data.cortImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Branding","Usability Testing","Motion Graphics"]}
               />
               <Person
@@ -86,7 +88,7 @@ const TeamPage = ({ data }) => {
                 location="Brooklyn"
                 position="Project Doula"
                 desc="Jorge has been supporting projects for years, guiding their growth and transition with care and enthusiasm. His experience is wide-ranging, including product and process design, media strategy development, content creation, and experiential event production. When he’s not talking about contracts and timelines, he's creating project plans for complicated dinners, testing recipes, and working on his faux taxidermy obsession."
-                img={data.jorgeImage.sizes}
+                img={data.jorgeImage.childImageSharp.gatsbyImageData}
                 capabilities={["Project Management","Roadmapping","Design Workshops","Research", "Technical & Business Processes"]}
               />
               <Person
@@ -94,7 +96,7 @@ const TeamPage = ({ data }) => {
                 location="New York"
                 position="Project Maven"
                 desc="Laura knows how to run a project like she knows the back of her hand. It's fair to say that Laura kicks butt at pretty much everything. She has years of experience working on every kind of project - including jet engines(!!!), and brings a sense of humor and a killer sense of style to her work. When she's not managing to perfection, she's teaching her two boys how to boat, crush it on the ski slopes and sweat awesomeness."
-                img={data.lauraImage.sizes}
+                img={data.lauraImage.childImageSharp.gatsbyImageData}
                 capabilities={["Project Management","Roadmapping","Design Workshops","Research","Technical & Business Processes"]}
               />
               <Person
@@ -102,7 +104,7 @@ const TeamPage = ({ data }) => {
                 location="Denver"
                 position="Socialist"
                 desc="Amy is our social media expert and content strategist. With an adventurous spirit and a discerning eye, she distills complicated messages into approachable prose. For 12 years she has been crafting her writing and editing skills in various roles and industries. Amy may be our social guru, but she's more inclined to be scaling a mountain; this gal has summited 15 of Colorado's 14,000-foot peaks."
-                img={data.amyImage.sizes}
+                img={data.amyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Content Strategy","Copywriting","Social"]}
               />
             </TeamGrid>
@@ -112,13 +114,13 @@ const TeamPage = ({ data }) => {
                 name="Evan Hirsch"
                 position=""
                 desc={<div dangerouslySetInnerHTML={{ __html: "Evan is Managing Partner of Engine Co. 4, LLC a consortium of business, creative and technical executives providing strategic direction to clients in games, healthcare and applied research. He is also a partner at <a target='_blank' href='http://theplayniceinstitute.com/'>The PlayNice Institute</a>, a company that designs fun, evidence based games to help children overcome anxiety and depression disorders." }} />}
-                img={data.evanImage.sizes}
+                img={data.evanImage.childImageSharp.gatsbyImageData}
               />
               <Partner
                 name="Thomas Logan"
                 position=""
                 desc={<div dangerouslySetInnerHTML={{ __html: "<div>As owner of <a target='_blank' href='https://equalentry.com'>Equal Entry</a>, Thomas has spent the past 15 years assisting organizations to create technology solutions that work for people with disabilities. Over his career Logan has worked on project deliverables for federal, state, and local government agencies as well as private organizations from startups to Fortune 500s.</div>" }} />}
-                img={data.thomasImage.sizes}
+                img={data.thomasImage.childImageSharp.gatsbyImageData}
               />
             </PartnerGrid>
             <Primitives/>
@@ -159,178 +161,152 @@ const TeamPage = ({ data }) => {
           </Section>
           <ContactSection/>
           <Footer/>
-      </div>
+      </Layout>
     )
   }
 
 export const query = graphql`
   query BlurUpQuery {
-    alanImage: imageSharp(id: { regex: "/alan_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80  }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    alanImage: file(relativePath: {regex: "/alan_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          placeholder: TRACED_SVG,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 },
+          transformOptions: { duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }}
+        )
       }
     }
-    alishaImage: imageSharp(id: { regex: "/alisha_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    alishaImage: file(relativePath: {regex: "/alisha_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          placeholder: TRACED_SVG,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 },
+          transformOptions: { duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }}
+        )
       }
     }
-    andreImage: imageSharp(id: { regex: "/andre_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    andreImage: file(relativePath: {regex: "/andre_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    haleyImage: imageSharp(id: { regex: "/haley_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    haleyImage: file(relativePath: {regex: "/haley_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    julynnImage: imageSharp(id: { regex: "/julynn_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80  }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    julynnImage: file(relativePath: {regex: "/julynn_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    cortImage: imageSharp(id: { regex: "/cort_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    cortImage: file(relativePath: {regex: "/cort_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    samImage: imageSharp(id: { regex: "/sam_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    samImage: file(relativePath: {regex: "/sam_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    jorgeImage: imageSharp(id: { regex: "/jorge_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    jorgeImage: file(relativePath: {regex: "/jorge_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    lauraImage: imageSharp(id: { regex: "/laura_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    lauraImage: file(relativePath: {regex: "/laura_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    amyImage: imageSharp(id: { regex: "/amy_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    amyImage: file(relativePath: {regex: "/amy_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    evanImage: imageSharp(id: { regex: "/hirsch_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    evanImage: file(relativePath: {regex: "/hirsch_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
-    thomasImage: imageSharp(id: { regex: "/thomas_front/" }) {
-      sizes(
-        maxWidth: 1200
-        duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
-        quality: 80
-        traceSVG: {
-          color: "#A6A8AF"
-          turdSize: 0
-          background: "#8CFFE6"
-        }
-      ) {
-        ...GatsbyImageSharpSizes_tracedSVG
+    thomasImage: file(relativePath: {regex: "/thomas_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
       }
     }
   }

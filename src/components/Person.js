@@ -2,7 +2,7 @@ import React from 'react'
 import * as Color from '../utils/colors'
 import styled from 'styled-components'
 import { breakpoint } from '../layouts/breakpoints'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 import Pin from './Pin'
 
 class Person extends React.Component {
@@ -10,7 +10,7 @@ class Person extends React.Component {
     return (
       <PersonContainer>
         <ImageContainer>
-          <BgImage sizes={this.props.img}/>
+          <GatsbyImage image={this.props.img} alt={`Portrait of ${this.props.name}`} />
         </ImageContainer>
         <Bio>
           <Name>{this.props.name}</Name>
@@ -103,23 +103,20 @@ const ImageContainer = styled.div`
   @supports (display:grid) {
     width: auto;
   }
-`
-const BgImage = styled(Img)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: auto;
-  z-index: -1;
-  height: 50vh;
-  ${breakpoint.for_phone_only`
-    height: 33vh;
-  `}
-  & > img {
-    object-fit: cover !important;
-    object-position: 50% 30% !important;
-    font-family: 'object-fit: cover !important; object-position: 0% 0% !important;'
+  & > .gatsby-image-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 50vh;
+    ${breakpoint.for_phone_only`
+      height: 33vh;
+    `}
+    img {
+      object-fit: cover !important;
+      object-position: 50% 30% !important;
+    }
   }
-
 `
 const Bio = styled.div`
   padding-left: 1em;

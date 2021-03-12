@@ -7,17 +7,17 @@ import { BodyLink } from '../components/Links'
 import PageIntro from '../components/PageIntro'
 import ContentContainer from '../layouts/ContentContainer'
 import { breakpoint } from '../layouts/breakpoints'
-
+import Layout from '../layouts/index'
 
 const NotFoundPage = () => (
-  <div>
+  <Layout>
     <ContentContainer><Header/></ContentContainer>
     <ContentContainer>
       <PageIntro withSubhead>Page not found.</PageIntro>
       <Subhead>The page you're looking for doesn't exist. Head back to <BodyLink to="/">our homepage.</BodyLink></Subhead>
     </ContentContainer>
     <Footer/>
-  </div>
+  </Layout>
 )
 
 const Subhead = styled.h4`
