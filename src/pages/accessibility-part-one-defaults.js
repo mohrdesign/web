@@ -149,6 +149,31 @@ const AccessibilityPartOne = () => {
   )
 }
 
+const BaseText = props => `
+  color: ${Color.Black};
+  margin: 0em;
+  font-weight: 400;
+  ${breakpoint.for_phone_only`
+    font-size: 15px;
+    line-height: 24px;
+    grid-column: span 12;
+  `}
+  ${breakpoint.for_tablet_portrait_up`
+    font-size: 16px;
+    line-height: 25px;
+    grid-column: 2 / span 10;
+  `}
+  ${breakpoint.for_tablet_landscape_up`
+    font-size: 18px;
+    line-height: 29px;
+    grid-column: 2 / span 10;
+  `}
+  ${breakpoint.for_desktop_up`
+    font-size: 18px;
+    line-height: 29px;
+    grid-column: 3 / span 8;
+  `}
+`
 
 const BaseGrid = props => `
   display: grid;
@@ -305,33 +330,6 @@ const HeroImage = styled.div`
     grid-column: 2 / span 10;
   `}
 `
-
-const BaseText = props => `
-  color: ${Color.Black};
-  margin: 0em;
-  font-weight: 400;
-  ${breakpoint.for_phone_only`
-    font-size: 15px;
-    line-height: 24px;
-    grid-column: span 12;
-  `}
-  ${breakpoint.for_tablet_portrait_up`
-    font-size: 16px;
-    line-height: 25px;
-    grid-column: 2 / span 10;
-  `}
-  ${breakpoint.for_tablet_landscape_up`
-    font-size: 18px;
-    line-height: 29px;
-    grid-column: 2 / span 10;
-  `}
-  ${breakpoint.for_desktop_up`
-    font-size: 18px;
-    line-height: 29px;
-    grid-column: 3 / span 8;
-  `}
-`
-
 const ArticleContent = styled.div`
   ${BaseText}
 `
