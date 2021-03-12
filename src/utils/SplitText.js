@@ -549,7 +549,7 @@ var _gsScope = (typeof(module) !== "undefined" && module.exports && typeof(globa
 	};
 	if (typeof(module) !== "undefined" && module.exports) { //node
 		module.exports = getGlobal();
-	} else if (typeof(define) === "function" && define.amd) { //AMD
-		define([], getGlobal);
+	} else if (typeof(define) === "function" && define.amd) { //AMD // eslint-disable-line
+		define([], getGlobal); // eslint-disable-line
 	}
 }("SplitText"));

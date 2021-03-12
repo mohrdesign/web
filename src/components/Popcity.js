@@ -1,10 +1,9 @@
 import React from 'react'
-import * as Color from '../utils/colors'
 import styled from 'styled-components'
-import { TweenLite, TimelineLite, TimelineMax } from 'gsap'
+import { TweenLite, TimelineLite } from 'gsap'
 import GSAP from 'react-gsap-enhancer'
 import TransitionGroup from 'react-transition-group/TransitionGroup'
-import { sample, find, without } from 'lodash'
+import { find, without } from 'lodash'
 import pdxpng from '../assets/images/portland.png'
 import bkpng from '../assets/images/brooklyn.png'
 import dnvpng from '../assets/images/denver.png'
@@ -24,13 +23,13 @@ function appearAnim(utils) {
     top: "60%",
     rotation: rand(-10, 10),
     force3D: !0,
-    ease: Expo.easeOut
+    ease: Expo.easeOut // eslint-disable-line
   }) );
   tl.add( TweenLite.to(utils.target, 1.5, {
     top: "150%",
     rotation: rand(-20, 20),
     force3D: !0,
-    ease: Expo.easeIn,
+    ease: Expo.easeIn, // eslint-disable-line
     onComplete: utils.options.callback
   }) );
   return tl
@@ -156,7 +155,7 @@ const PopDiv = styled.div`
     clear: both;
   }
   &:after, &:before {
-    content: ''
+    content: '';
     display: table;
   }
 `

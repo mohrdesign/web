@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { NavLink } from './Links'
 import * as Color from '../utils/colors'
 import styled from 'styled-components'
