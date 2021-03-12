@@ -32,7 +32,7 @@ class ExpertisePage extends React.Component {
       <Layout>
         <ContentContainer><Header/></ContentContainer>
         <Helmet>
-          <html className="secondarypage"/>
+          <html lang="en" className="secondarypage"/>
         </Helmet>
         <ContentContainer>
           <PageIntro withSubhead>Every project is an opportunity to make things better for our clients and their customers.</PageIntro>
