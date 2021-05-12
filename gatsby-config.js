@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Mohr Design`,
+    title: 'Mohr Design',
+    description: 'We create meaningful experiences that forever shape a users connection with a brand.',
+    siteURL: 'https://mohr.design',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

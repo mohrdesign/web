@@ -1,5 +1,5 @@
 // primaries
-export const PrimaryDark = ''
+export const PrimaryDark = '#0041E1'
 export const Primary = '#336CF8'
 export const PrimaryMid = ''
 export const PrimaryLight = ''
