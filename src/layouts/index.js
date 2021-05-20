@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import './index.css'
 
-const Layout = ({ children }) => (
+const Layout = (props) => (
   <div>
     <Helmet
       title="Mohr Design"
@@ -23,13 +23,13 @@ const Layout = ({ children }) => (
       <html lang="en" />
       <script src="/modernizr.js" type="text/javascript" />
     </Helmet>
-    {children}
+    {props.children}
   </div>
 )
 
-Layout.propTypes = {
-  children: PropTypes.func,
-}
+// Layout.propTypes = {
+//   children: PropTypes.func,
+// }
 
 const HeaderContainer = styled.div`
   background: lightgray;

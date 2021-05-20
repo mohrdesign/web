@@ -14,13 +14,14 @@ import GridImage from '../../../static/grid.svg'
 import CircleImage from '../../../static/primitive-circle-purple.svg'
 import CircleImageSm from '../../../static/primitive-circle-small-purple.svg'
 import TriangleImage from '../../../static/primitive-triangle-purple.svg'
+import HeaderImage from '../../assets/images/articles/a11y-pt1/header.png'
 import { StaticImage } from "gatsby-plugin-image"
 import TwitterIcon from '../../components/svgs/TwitterIcon'
 import FacebookIcon from '../../components/svgs/FacebookIcon'
 import LinkedInIcon from '../../components/svgs/LinkedInIcon'
 import Layout from '../../layouts/index';
 import useSiteMetadata from '../../components/hooks/use-site-metadata';
-import { motion } from 'framer-motion'
+import { motion, useTransform, useViewportScroll, useMotionValue } from 'framer-motion'
 
 const AccessibilityPartOne = ({ location }) => {
   const { siteURL } = useSiteMetadata();
@@ -28,6 +29,12 @@ const AccessibilityPartOne = ({ location }) => {
   const facebookShareURL = `https://www.facebook.com/sharer/sharer.php?u=${fullURL}`;
   const twitterShareURL = `https://twitter.com/intent/tweet/?text=${encodeURI('Accessibility Talk Pt. 1: Defaults')}&url=${fullURL}`;
   const linkedInShareURL = `https://www.linkedin.com/sharing/share-offsite/?url=${fullURL}`;
+
+  // const { scrollY } = useViewportScroll();
+  // const rotation = useTransform(scrollY, [0, 300], [0, 15]);
+  // const gradientStart = useTransform(scrollY, [0, 400], ['#336CF8','#6F2CC3']);
+
+  // 'linear-gradient(151deg, #336CF8 0%, #6F2CC3 100%)'
 
   const socialHover = {
     scale: 1.2,
@@ -42,17 +49,39 @@ const AccessibilityPartOne = ({ location }) => {
       <Helmet>
         <html className="secondarypage"/>
         <meta property='og:title' content='Accessibility Talk Pt 1: Defaults'/>
-        {/* <meta property='og:image' content=''/> */}
+        <meta property='og:image' content={`${siteURL}${HeaderImage}`}/>
         <meta property='og:description' content='Most organizations are still figuring out the best way to approach accessibility design, so we reached out to accessibility expert Thomas Logan for advice on how to create a delightful experience for users with disabilities.'/>
         <meta property='og:url' content={fullURL}/>
       </Helmet>
       <ContentContainer>
         <Grid>
           <Title>Accessibility Talk Pt 1: Defaults</Title>
-          <HeroImage>
+          <HeroImage
+            // style={{ backgroundImage: `linear-gradient(151deg, ${gradientStart} 0%, #4A178A 100%)` }}
+            // 'linear-gradient(151deg, #336CF8 0%, #6F2CC3 100%)'
+          >
+            {/* <SvgContainer viewBox="0 0 797 320" xmlns="http://www.w3.org/2000/svg">
+              <motion.linearGradient
+                id="myGradient"
+              >
+                <motion.stop offset="5%" stop-color={gradientStart} />
+                <stop offset="95%" stop-color="#6F2CC3" />
+              </motion.linearGradient>
+              <motion.rect
+                x="0"
+                y="0"
+                stroke-width="0"
+                strokeLinejoin="round"
+                width="797"
+                height="320"
+                fill="url(#myGradient)"
+              />
+            </SvgContainer> */}
             <StaticImage
               src="../../assets/images/articles/a11y-pt1/header.png"
               alt="A11Y written in block letters"
+              width={700}
+              layout="constrained"
               loading="eager"
               placeholder="none"
             />
@@ -400,13 +429,29 @@ const AboutLink = styled.a`
     margin-left: 1em;
   `}
 `
-
-const HeroImage = styled.div`
+const SvgContainer = styled(motion.svg)`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 797px;
+  max-height: 320px;
+` 
+const HeroImage = styled(motion.div)`
+  // position: relative;
+  // top: 0;
+  // left: 0;
   border-radius: 25px;
-  // height: 310px;
-  // background-image: ${Color.GradientDark};
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  // margin: 0 auto;
+  text-align: center;
+  background-image: ${Color.GradientDark};
   & .gatsby-image-wrapper img {
-    mix-blend-mode: multiple;
+    mix-blend-mode: luminosity;
   }
   ${breakpoint.for_phone_only`
     grid-column: span 12;
