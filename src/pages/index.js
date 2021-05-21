@@ -13,7 +13,7 @@ const HomePage = ({ transition }) => (
   <Layout>
     <ContentContainer><Header onDark /></ContentContainer>
     <Helmet>
-      <html className="homepage"/>
+      <html lang="en" className="homepage"/>
     </Helmet>
     <ContentContainer>
       <HomepageText/>

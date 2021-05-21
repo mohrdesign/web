@@ -22,7 +22,7 @@ const TeamPage = ({ data }) => {
       <Layout>
         <ContentContainer><Header/></ContentContainer>
           <Helmet>
-            <html className="secondarypage"/>
+            <html lang="en" className="secondarypage"/>
           </Helmet>
           <ContentContainer>
             <PageIntro>We are a group of experts in product design, research, content, strategy and business management.</PageIntro>
