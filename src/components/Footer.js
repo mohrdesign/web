@@ -27,7 +27,7 @@ class Footer extends React.Component {
                   <ul>
                     <li><FooterLink to='/expertise'>Expertise</FooterLink></li>
                     <li><FooterLink to='/team'>Team</FooterLink></li>
-                    {/* <li><FooterLink to='/accessibility-part-one-defaults'>Accessibility</FooterLink></li> */}
+                    <li><FooterLink to='/articles/accessibility-part-one-defaults'>Accessibility</FooterLink></li>
                   </ul>
                 </FooterTop>
               )}
