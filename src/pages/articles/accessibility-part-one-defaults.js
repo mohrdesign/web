@@ -14,7 +14,7 @@ import GridImage from '../../../static/grid.svg'
 import CircleImage from '../../../static/primitive-circle-purple.svg'
 import CircleImageSm from '../../../static/primitive-circle-small-purple.svg'
 import TriangleImage from '../../../static/primitive-triangle-purple.svg'
-import HeaderImage from '../../assets/images/articles/a11y-pt1/header_transparent.png'
+import OgImage from '../../assets/images/articles/a11y-pt1/og-image.png'
 import { StaticImage } from "gatsby-plugin-image"
 import TwitterIcon from '../../components/svgs/TwitterIcon'
 import FacebookIcon from '../../components/svgs/FacebookIcon'
@@ -43,7 +43,7 @@ const AccessibilityPartOne = ({ location }) => {
       <Helmet>
         <html className="secondarypage"/>
         <meta property='og:title' content='Accessibility Talk Pt 1: Defaults'/>
-        <meta property='og:image' content={`${siteURL}${HeaderImage}`}/>
+        <meta property='og:image' content={`${siteURL}${OgImage}`}/>
         <meta property='og:description' content='Most organizations are still figuring out the best way to approach accessibility design, so we reached out to accessibility expert Thomas Logan for advice on how to create a delightful experience for users with disabilities.'/>
         <meta property='og:url' content={fullURL}/>
       </Helmet>
