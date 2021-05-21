@@ -29,43 +29,51 @@ const TeamPage = ({ data }) => {
             <TeamGrid>
               <Person
                 name="Alisha Dopkin"
-                location="Denver"
+                location="Colorado"
                 position="Stage Director"
-                desc="Alisha has one belief in life: be fierce. She brings this fierceness and relentless enthusiasm to the table, managing teams to see products to the finish line. When she’s not kicking butt organizing a project, you can find her running bazillions of miles around Colorado with her 5yr old on her back."
+                desc="Alisha has one belief in life: be fierce. She brings a relentless enthusiasm to the table, managing teams to see products to the finish line. She gives everything 100 percent, whether that’s organizing a project, hoarding beloved rescue pets, or ripping laps on the local ski mountain with her daughter in tow."
                 img={data.alishaImage.childImageSharp.gatsbyImageData}
                 capabilities={["Project Management","Roadmapping","Design Workshops","Research", "Business & Technical Processes"]}
               />
               <Person
                 name="Andre Mohr"
-                location="Brooklyn"
+                location="New York"
                 position="Head Honcho"
-                desc="Andre has a passion for bringing a human experience to a digital world. He has 10+ years doing Product design for frog, Microsoft, and AOL, among others. A native German now residing in NYC, Andre’s (not so) secret resume includes DJ, snowboarder, photographer, sommelier, and father to a well-mannered and opinionated 4yr old."
+                desc="Andre has a passion for bringing a human experience to a digital world. He has 20 years doing Product design for frog, Microsoft, and AOL, among others. A native German now residing in New York, Andre’s (not so) secret resume includes DJ, snowboarder, photographer, and sommelier. He’s also father to a well-mannered daughter and a rambunctious pup."
                 img={data.andreImage.childImageSharp.gatsbyImageData}
                 capabilities={["Human-Centered Design","Design Workshops","Ideation Facilitation","User Research", "Creative Direction"]}
               />
               <Person
                 name="Haley Love"
-                location="Portland"
+                location="Oregon"
                 position="Aesthetician"
-                desc="Haley is so good at helping people fix their UX hang-ups we call her &quot;The Operator.&quot; With 8 years in the biz, she’s made games, sites, apps and everything else. If you plan to visit Haley, her husband and their 2 year old in beautiful Portland, OR, please bring your own snowboard or Ultimate disc."
+                desc="Haley is so good at helping people fix their UX hang-ups we call her &quot;The Operator.&quot; With 10+ years in the biz, she’s made games, sites, apps and everything else. If you plan to visit Haley, her husband and their son in beautiful Portland, OR, please bring your own snowboard or Ultimate disc."
                 img={data.haleyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
               <Person
                 name="Alan Dickinson"
-                location="Brooklyn"
+                location="New York"
                 position="Pixel Pusher"
                 desc="Alan is based in Brooklyn, New York. Most recently he designed for Spotify and Karma on their in-house teams. Before that, he worked at frog where he led interaction design efforts for fortune 500 clients. He’s a bit of a mystery man but what we do know is he’s insanely dependable, irritatingly level-headed, and incredibly driven. "
                 img={data.alanImage.childImageSharp.gatsbyImageData}
-                capabilities={["Interaction Design","Visual Design","Prototyping","Frontend Engineering"]}
+                capabilities={["Interaction Design","Visual Design","Prototyping","Front-end Engineering"]}
               />
               <Person
                 name="Julynn Benedetti"
-                location="Portland"
+                location="Oregon"
                 position="UX Artisan"
                 desc="For Julynn, finally figuring out she was a designer was like finding out she got into Hogwarts. In her past life, she was a small town girl from Texas, a French and History double major, and an officer in the Air Force. Now Julynn works her magic by creating beautiful, intuitive experiences for frog design, AOL and most recently, Apple. In her free time, she thoroughly enjoys instigating impromptu arm wrestling tournaments, beating her husband at board games, and reading books (complete with accents and voices) aloud to her kids."
                 img={data.julynnImage.childImageSharp.gatsbyImageData}
                 capabilities={["User Experience Design","User Interface Design","Research"]}
+              />
+              <Person
+                name="Brandon Barron"
+                location="Colorado"
+                position="Raconteur"
+                desc="/ˌräˌkänˈtər/ n. One who tells stories and anecdotes with skill and wit. See also, one human-centered designer with a passion for communicating and crafting delightful experiences that align to business strategy. Technically speaking, Brandon is a wicked good storyteller. He connects our customers to products through intentionally designed experiences. When he’s off the clock, you can find him unplugging in the mountains camping with his wife, two kids, a dog, and a cat (who thinks he’s a dog)."
+                img={data.brandonImage.childImageSharp.gatsbyImageData}
+                capabilities={["User Experience Design","User Interface Design","User Research","Workshop Facilitation"]}
               />
               <Person
                 name="Sam Kang"
@@ -77,7 +85,7 @@ const TeamPage = ({ data }) => {
               />
               <Person
                 name="Cort Langworthy"
-                location="Denver"
+                location="Colorado"
                 position="Flowmaster"
                 desc="Cort makes beautiful experiences flow like music from the toughest design challenges. He's been jamming on designs as long as he can remember, bringing over 30 years of experience to the Mohr Design team. Despite the Dad vibes, Cort is a bit of a savant, keeping his fingers on the pulse of any and all things technology. Outside of work, you can find him fronting his band, Open Space, and enjoying the stunning wilderness of Colorado in his vintage Airstream, fly rod in hand."
                 img={data.cortImage.childImageSharp.gatsbyImageData}
@@ -85,7 +93,7 @@ const TeamPage = ({ data }) => {
               />
               <Person
                 name="Jorge De La Garza"
-                location="Brooklyn"
+                location="New York"
                 position="Project Doula"
                 desc="Jorge has been supporting projects for years, guiding their growth and transition with care and enthusiasm. His experience is wide-ranging, including product and process design, media strategy development, content creation, and experiential event production. When he’s not talking about contracts and timelines, he's creating project plans for complicated dinners, testing recipes, and working on his faux taxidermy obsession."
                 img={data.jorgeImage.childImageSharp.gatsbyImageData}
@@ -95,17 +103,17 @@ const TeamPage = ({ data }) => {
                 name="Laura Zimbaldi"
                 location="New York"
                 position="Project Maven"
-                desc="Laura knows how to run a project like she knows the back of her hand. It's fair to say that Laura kicks butt at pretty much everything. She has years of experience working on every kind of project - including jet engines(!!!), and brings a sense of humor and a killer sense of style to her work. When she's not managing to perfection, she's teaching her two boys how to boat, crush it on the ski slopes and sweat awesomeness."
+                desc="Laura knows how to run a project like she knows the back of her hand. It's fair to say that Laura kicks butt at pretty much everything. She has years of experience working on every kind of project - including jet engines(!!!), and brings a sense of humor and a killer sense of style to her work. When she's not managing to perfection, she's teaching her three kids how to boat, crush it on the ski slopes and sweat awesomeness."
                 img={data.lauraImage.childImageSharp.gatsbyImageData}
                 capabilities={["Project Management","Roadmapping","Design Workshops","Research","Technical & Business Processes"]}
               />
               <Person
                 name="Amy Fisher"
-                location="Denver"
+                location="Colorado"
                 position="Socialist"
-                desc="Amy is our social media expert and content strategist. With an adventurous spirit and a discerning eye, she distills complicated messages into approachable prose. For 12 years she has been crafting her writing and editing skills in various roles and industries. Amy may be our social guru, but she's more inclined to be scaling a mountain; this gal has summited 15 of Colorado's 14,000-foot peaks."
+                desc="Amy is our social media expert and content strategist. With an adventurous spirit and a discerning eye, she distills complicated messages into approachable prose. For 15 years she has been crafting her writing and editing skills in various roles and industries. When she’s not nerding out on grammar and social media analytics, you can find her running or biking Colorado mountain trails with her husband and two daughters."
                 img={data.amyImage.childImageSharp.gatsbyImageData}
-                capabilities={["Content Strategy","Copywriting","Social"]}
+                capabilities={["Content Strategy","Copywriting","Social Media"]}
               />
             </TeamGrid>
             <PartnerHeader>We partner with some great people.</PartnerHeader>
@@ -214,6 +222,18 @@ export const query = graphql`
       }
     }
     julynnImage: file(relativePath: {regex: "/julynn_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
+      }
+    }
+    brandonImage: file(relativePath: {regex: "/brandon_front/"}) {
       childImageSharp {
         gatsbyImageData(
           layout: FULL_WIDTH,
