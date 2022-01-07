@@ -65,7 +65,7 @@ const AccessibilityPartOne = ({ location }) => {
               <ParagraphTitle>Introduction</ParagraphTitle>
               <p>Mohr Design has been working on accessibility designs over the last two years, using the user’s experience to guide us. Most organizations are still figuring out the best way to approach accessibility (a11y) design, so we reached out to accessibility expert, Thomas Logan (owner of Equal Entry), for advice on how to create a delightful experience for our users with disabilities. See below for that conversation.</p>
               <SecondaryParagraphTitle>Cort Langworthy</SecondaryParagraphTitle>
-              <p>When is it appropriate to deviate from the default top left to bottom right tab order? Priority of communication is taken care of for sighted users in many different ways through the use of typography color and other basic design techniques. But in doing so creates a mismatch between visual design and an a11y considerate experience. Creating a custom tab order can and should compensate for that of course, but when do golden paths for the accessible user rise to a level where we should break from this typical pattern?</p>
+              <p>When is it appropriate to deviate from the default top left to bottom right tab order? Priority of communication is taken care of for sighted users in many different ways through the use of typography color and other basic design techniques. But in doing so creates a mismatch between visual design and an a11y considerate experience. Creating a custom tab order can and should compensate, for that of course, but when do golden paths for the accessible user rise to a level where we should break from this typical pattern?</p>
               <SecondaryParagraphTitle>Thomas Logan</SecondaryParagraphTitle>
               <p>For the logo consider adding a "Skip to content" link. You can avoid having the logo be the first thing someone encounters by adding this link that allows a keyboard user to skip over both the homepage logo and the various repetitive navigation links that exist at the top of the page.</p>
             </ArticleText>
@@ -90,8 +90,8 @@ const AccessibilityPartOne = ({ location }) => {
               <FigureCaption>Google's home page</FigureCaption>
             </Figure>
             <ArticleText>
-              <p>If you hire someone from the accessibility consulting world, they're going to teach you the general rules. They're going through so many things. Then somewhere in the translation the general rule just becomes this absolute rule. A lot of organizations then somehow decide it has to be this way. Well technically, that's not even what the standard says. "Do it like this" somehow becomes "don't change it".</p>
-              <p>The Web Content Accessibility Guidelines <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Success Criterion 2.4.3 Focus Order</a> allow for "focusable components [to] receive focus in an order that preserves meaning and operability." However, they do not give concrete illustrations of when it is appropriate to do so. I hope as we continue this conversation we can help illustrate thoughtful cases where it is appropriate to deviate from top to bottom and left to right. Many people end up following the WCAG guidelines with a very rigid thought that it must always be top to bottom left to right.</p>
+              <p>If you hire someone from the accessibility consulting world, they're going to teach you the general rules. They're going through so many things. Then somewhere in the translation the general rule just becomes this absolute rule. A lot of organizations then somehow decide it has to be this way. Well technically, that's not even what the standard says. "Do it like this" somehow becomes "don't change it."</p>
+              <p>The Web Content Accessibility Guidelines <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-focus-order.html">Success Criterion 2.4.3 Focus Order</a> allow for "focusable components [to] receive focus in an order that preserves meaning and operability." However, they do not give concrete illustrations of when it is appropriate to do so. I hope as we continue this conversation we can help illustrate thoughtful cases where it is appropriate to deviate from top-to-bottom and left-to-right. Many people end up following the WCAG guidelines with a very rigid thought that it must always be top to bottom left-to-right.</p>
             </ArticleText>
             <Figure>
               <StaticImage 
@@ -111,13 +111,13 @@ const AccessibilityPartOne = ({ location }) => {
             </Figure>
             <ArticleText>
               <SecondaryParagraphTitle>Cort Langworthy</SecondaryParagraphTitle>
-              <p>Most examples are developer focused and provide code examples… We need more design guidance.</p>
+              <p>Most examples are developer focused and provide code examples. We need more design guidance.</p>
               <SecondaryParagraphTitle>Andre Mohr</SecondaryParagraphTitle>
               <p>Why is that? So they can't get sued over things?</p>
               <SecondaryParagraphTitle>Thomas Logan</SecondaryParagraphTitle>
-              <p>Probably because there were arguments in the working group when this was getting written that pushed away from making an absolute rule. It's not like they included an example of when it did make sense to change the order and it still preserved the meaning and operability. They don't show you that as a reference case. So then everyone ends up saying "Okay, just make it this rule of top-down, left-to-right." I think that's why it's good if we include examples and how we thought about the meaning and operability. Either through user testing or through our thoughts we're explaining it, we're trying to show you one or two examples to say here's how you could think about that.</p>
+              <p>Probably because there were arguments in the working group when this was getting written that pushed away from making an absolute rule. It's not like they included an example of when it did make sense to change the order and it still preserved the meaning and operability. They don't show you that as a reference case. So then everyone ends up saying "Okay, just make it this rule of top-down, left-to-right." I think that's why it's good if we include examples and how we thought about the meaning and operability. Either through user testing or through our thoughts we're explaining it, we're trying to show you one or two examples to say, "Here's how you could think about that."</p>
               <SecondaryParagraphTitle>Cort Langworthy</SecondaryParagraphTitle>
-              <p>I think your example is a good one. And I think it's an interesting take on that question. It would be helpful to show a small piece of a website and talk about how that particular problem might be addressed and create specific examples. Because that is exactly what is so annoying – there's nothing but talk about all this. Show me. There's no “Here’s an example of how I did it, and I'm going to explain why I did it this way.</p>
+              <p>I think your example is a good one. And I think it's an interesting take on that question. It would be helpful to show a small piece of a website and talk about how that particular problem might be addressed and create specific examples. Because that is exactly what is so annoying – there's nothing but talk about all this. Show me. There's no, “Here’s an example of how I did it, and I'm going to explain why I did it this way."</p>
               <SecondaryParagraphTitle>Thomas Logan</SecondaryParagraphTitle>
               <p>Try hitting tab once the close button is the first element that receives focus on this <a href="https://getbootstrap.com/docs/4.0/components/modal/">modal dialog example.</a></p>
             </ArticleText>
@@ -130,11 +130,11 @@ const AccessibilityPartOne = ({ location }) => {
               <FigureCaption>The Bootstrap Framework's dialog component</FigureCaption>
             </Figure>
             <ArticleText>
-              <p>Another example could be a sequenced set of actions in a user interface. For example, When you use Google Maps to search for nearby restaurants. Every time I make a selection the focus order does not move back up to the top of page. It keeps moving through a logical context on the page.</p>
+              <p>Another example could be a sequenced set of actions in a user interface. An exmple would be when you use Google Maps to search for nearby restaurants. Every time I make a selection the focus order does not move back up to the top of the page. It keeps moving through a logical context on the page.</p>
               <SecondaryParagraphTitle>Cort Langworthy</SecondaryParagraphTitle>
-              <p>I think they're always a desire to teach somebody how to obey a rule rather than how to think– you can scale rules. It's harder to scale thinking. If you write rules, then you can automate a bunch of it, or pay someone less money to do it. If you have to hire people to think, it takes a longer and they are expensive.</p>
+              <p>I think there is always a desire to teach somebody how to obey a rule rather than how to think– you can scale rules. It's harder to scale thinking. If you write rules, then you can automate a bunch of it, or pay someone less money to do it. If you have to hire people to think, it takes a longer and they are expensive.</p>
               <SecondaryParagraphTitle>Thomas Logan</SecondaryParagraphTitle>
-              <p>Right, and then you're worried because if they thought the wrong way and then they did it wrong. You're legally at risk.</p>
+              <p>Right, and then you're worried because if they thought the wrong way and then they did it wrong, then you're legally at risk.</p>
             </ArticleText>
           </ArticleContent>
           <ShareLinks>
