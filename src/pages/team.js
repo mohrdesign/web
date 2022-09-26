@@ -52,22 +52,6 @@ const TeamPage = ({ data }) => {
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
               
-              // <Person
-              //   name="Julynn Benedetti"
-              //   location="Oregon"
-              //   position="UX Artisan"
-              //   desc="For Julynn, finally figuring out she was a designer was like finding out she got into Hogwarts. In her past life, she was a small town girl from Texas, a French and History double major, and an officer in the Air Force. Now Julynn works her magic by creating beautiful, intuitive experiences for frog design, AOL and most recently, Apple. In her free time, she thoroughly enjoys instigating impromptu arm wrestling tournaments, beating her husband at board games, and reading books (complete with accents and voices) aloud to her kids."
-              //   img={data.julynnImage.childImageSharp.gatsbyImageData}
-              //   capabilities={["User Experience Design","User Interface Design","Research"]}
-              // />
-              // <Person
-//                 name="Brandon Barron"
-//                 location="Colorado"
-//                 position="Raconteur"
-//                 desc="/ˌräˌkänˈtər/ n. One who tells stories and anecdotes with skill and wit. See also, one human-centered designer with a passion for communicating and crafting delightful experiences that align to business strategy. Technically speaking, Brandon is a wicked good storyteller. He connects our customers to products through intentionally designed experiences. When he’s off the clock, you can find him unplugging in the mountains camping with his wife, two kids, a dog, and a cat (who thinks he’s a dog)."
-//                 img={data.brandonImage.childImageSharp.gatsbyImageData}
-//                 capabilities={["User Experience Design","User Interface Design","User Research","Workshop Facilitation"]}
-//               />
               <Person
                 name="Sam Kang"
                 location="New York"
@@ -76,14 +60,6 @@ const TeamPage = ({ data }) => {
                 img={data.samImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Branding","Motion Design","Prototyping"]}
               />
-              // <Person
-//                 name="Cort Langworthy"
-//                 location="Colorado"
-//                 position="Flowmaster"
-//                 desc="Cort makes beautiful experiences flow like music from the toughest design challenges. He's been jamming on designs as long as he can remember, bringing over 30 years of experience to the Mohr Design team. Despite the Dad vibes, Cort is a bit of a savant, keeping his fingers on the pulse of any and all things technology. Outside of work, you can find him fronting his band, Open Space, and enjoying the stunning wilderness of Colorado in his vintage Airstream, fly rod in hand."
-//                 img={data.cortImage.childImageSharp.gatsbyImageData}
-//                 capabilities={["Interaction Design","Visual Design","Branding","Usability Testing","Motion Graphics"]}
-//               />
 				<Person
 				  name="Laura Zimbaldi"
 				  location="New York"
