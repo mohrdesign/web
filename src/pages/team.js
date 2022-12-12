@@ -92,30 +92,9 @@ const TeamPage = ({ data }) => {
                 img={data.amyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Content Strategy","Copywriting","Social Media"]}
               />
-              /*<Person
-                name="Alan Dickinson"
-                location="New York"
-                position="Pixel Pusher"
-                desc="Alan is based in Brooklyn, New York. Most recently he designed for Spotify and Karma on their in-house teams. Before that, he worked at frog where he led interaction design efforts for fortune 500 clients. He’s a bit of a mystery man but what we do know is he’s insanely dependable, irritatingly level-headed, and incredibly driven. "
-                img={data.alanImage.childImageSharp.gatsbyImageData}
-                capabilities={["Interaction Design","Visual Design","Prototyping","Front-end Engineering"]}
-              />*/
+              
             </TeamGrid>
-           /* <PartnerHeader>We partner with some great people.</PartnerHeader>
-            <PartnerGrid>
-              <Partner
-                name="Evan Hirsch"
-                position=""
-                desc={<div dangerouslySetInnerHTML={{ __html: "Evan is Managing Partner of Engine Co. 4, LLC a consortium of business, creative and technical executives providing strategic direction to clients in games, healthcare and applied research. He is also a partner at <a target='_blank' href='http://theplayniceinstitute.com/'>The PlayNice Institute</a>, a company that designs fun, evidence based games to help children overcome anxiety and depression disorders." }} />}
-                img={data.evanImage.childImageSharp.gatsbyImageData}
-              />
-              <Partner
-                name="Thomas Logan"
-                position=""
-                desc={<div dangerouslySetInnerHTML={{ __html: "<div>As owner of <a target='_blank' href='https://equalentry.com'>Equal Entry</a>, Thomas has spent the past 15 years assisting organizations to create technology solutions that work for people with disabilities. Over his career Logan has worked on project deliverables for federal, state, and local government agencies as well as private organizations from startups to Fortune 500s.</div>" }} />}
-                img={data.thomasImage.childImageSharp.gatsbyImageData}
-              />
-            </PartnerGrid> */
+          
             <Primitives/>
           </ContentContainer>
           <Section dark>
