@@ -92,6 +92,14 @@ const TeamPage = ({ data }) => {
                 img={data.amyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Content Strategy","Copywriting","Social Media"]}
               />
+              <Person
+                name="Richard Merrick"
+                location="London"
+                position="The Generator"
+                desc="Richard is the person you want in a creative brainstorm, generating ideas as if it’s his job. With a background in game development, he knows his way around the human brain, what motivates people and why. When he’s not looking for UX opportunities, you can find him rock climbing or constructing epic LEGO structures with his son."
+                img={data.richardImage.childImageSharp.gatsbyImageData}
+                capabilities={["Design Strategy","Interaction Design","Design Workshops","Research"]}
+              />
               
             </TeamGrid>
           
@@ -294,6 +302,18 @@ export const query = graphql`
       }
     }
     adamImage: file(relativePath: {regex: "/adam_front/"}) {
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH,
+          quality: 80,
+          tracedSVGOptions: { background: "#8CFFE6", color: "#A6A8AF", turdSize: 0 }, 
+          transformOptions: {
+            duotone: { highlight: "#19FFCD", shadow: "#4E535F", opacity: 80 }
+          }
+        )
+      }
+    }
+    richardImage: file(relativePath: {regex: "/richard_front/"}) {
       childImageSharp {
         gatsbyImageData(
           layout: FULL_WIDTH,
