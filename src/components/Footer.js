@@ -40,7 +40,8 @@ class Footer extends React.Component {
                       <City {...props} onClick={() => props.onDark && this.refs.popcontroller.handleClick("portland")}>Portland</City> */}
                       <City {...props}>New York</City> /&nbsp;
                       <City {...props}>Colorado</City> /&nbsp;
-                      <City {...props}>Oregon</City>
+                      <City {...props}>West Virginia</City> /&nbsp;
+                      <City {...props}>North Carolina</City>
                     </p>
                   </li>
                   { props.onDark && (<li><FooterEmailLink className='onDark' href='mailto:hello@mohr.design'>hello@mohr.design</FooterEmailLink></li>) }
