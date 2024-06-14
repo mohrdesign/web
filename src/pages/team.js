@@ -51,7 +51,14 @@ const TeamPage = ({ data }) => {
                 img={data.haleyImage.childImageSharp.gatsbyImageData}
                 capabilities={["Visual Design","Branding","Usability Testing","Interaction Design"]}
               />
-              
+              <Person
+                name="Alan Dickinson"
+                location="North Carolina"
+                position="Track(pad) Star"
+                desc="Alan got his start designing for a local ad agency before graduating high school. Now he’s a seasoned designer with experience leading projects for startups and fortune 500 businesses. He’s a serial learner and moves fluidly between interaction design, research, branding, and frontend engineering. When he’s not basking in the glow of a backlit display, Alan can be found chasing his 1 year old son, cutting back the bamboo creeping towards his house, or driving to Home Depot."
+                img={data.alanImage.childImageSharp.gatsbyImageData}
+                capabilities={["Interaction Design","User Research","Visual Design","Prototyping","Front-end Engineering"]}
+              />
               <Person
                 name="Sam Kang"
                 location="New York"
@@ -59,14 +66,6 @@ const TeamPage = ({ data }) => {
                 desc="Sam has a natural curiosity which started as a kid taking apart and putting back together all the machines in his house. It later manifested itself through digital games, multi user experiences, and online entertainment for all ages. These days that curiosity helps drive serious change for serious clients (and the not so serious). Off the clock, Sam hangs out with his two kids and wife in glorious Northern New Jersey."
                 img={data.samImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Branding","Motion Design","Prototyping"]}
-              />
-	      <Person
-                name="Alan Dickinson"
-                location="North Carolina"
-                position="Track(pad) Star"
-                desc="Alan got his start designing for a local ad agency before graduating high school. Now he’s a seasoned designer with experience leading projects for startups and fortune 500 businesses. He’s a serial learner and moves fluidly between interaction design, research, branding, and frontend engineering. When he’s not basking in the glow of a backlit display, Alan can be found chasing his 1 year old son, cutting back the bamboo creeping towards his house, or driving to Home Depot."
-                img={data.alanImage.childImageSharp.gatsbyImageData}
-                capabilities={["Interaction Design","User Research","Visual Design","Prototyping","Front-end Engineering"]}
               />
 				<Person
 				  name="Laura Zimbaldi"
