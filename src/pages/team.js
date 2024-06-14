@@ -60,6 +60,14 @@ const TeamPage = ({ data }) => {
                 img={data.samImage.childImageSharp.gatsbyImageData}
                 capabilities={["Interaction Design","Visual Design","Branding","Motion Design","Prototyping"]}
               />
+	      <Person
+                name="Alan Dickinson"
+                location="North Carolina"
+                position="Trackpad Star"
+                desc="Alan got his start designing for a local ad agency before graduating high school. Now he’s a seasoned designer with experience leading projects for startups and fortune 500 businesses. He’s a serial learner and moves fluidly between interaction design, research, branding, and frontend engineering. When he’s not basking in the glow of a backlit display, Alan can be found chasing his 1 year old son, cutting back the bamboo creeping towards his house, or driving to Home Depot."
+                img={data.alanImage.childImageSharp.gatsbyImageData}
+                capabilities={["Interaction Design","User Research","Visual Design","Prototyping","Front-end Engineering"]}
+              />
 				<Person
 				  name="Laura Zimbaldi"
 				  location="New York"
